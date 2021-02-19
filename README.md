@@ -4,5 +4,5 @@
 
 Eduardo Jorge Nicolau
 Gustavo Luchi da Silva
-
+David Rosa Mendonça
 Guilherme Noronha da Silva
