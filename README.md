@@ -4,6 +4,6 @@
 
 + David Rosa Mendonça 🍔
 + Eduardo Jorge Nicolau
-+ Guilherme Noronha da Silva
++ Guilherme Noronha da Silva ♨️
 + Gustavo Luchi da Silva 🐧
 + Murilo Sartori
