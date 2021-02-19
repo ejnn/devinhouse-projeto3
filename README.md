@@ -2,5 +2,5 @@
 
 ## ✋ Autores
 
-Eduardo Jorge Nicolau
-Gustavo Luchi da Silva
++ Eduardo Jorge Nicolau
++ Gustavo Luchi da Silva
