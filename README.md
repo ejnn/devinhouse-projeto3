@@ -3,3 +3,4 @@
 ## ✋ Autores
 
 Gustavo Luchi da Silva
+Murilo Sartori
