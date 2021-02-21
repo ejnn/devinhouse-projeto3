@@ -1,14 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import { createServer } from 'miragejs';
-
-
+import Test from './Test';
+import Trash from './utils/trash icon.svg'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Test><img src={Trash} alt='trash icon' /></Test>
+        <Test>Comprar</Test>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
