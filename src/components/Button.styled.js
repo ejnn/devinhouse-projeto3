@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
+const SButton = styled.button`
   cursor: pointer;
   font-size: 18px;
   line-height: 24px;
@@ -28,4 +28,4 @@ const Button = styled.button`
   }
 `;
 
-export default Button;
+export default SButton;
