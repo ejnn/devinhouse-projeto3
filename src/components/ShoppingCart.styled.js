@@ -16,7 +16,7 @@ const ShoppingCartWrapper = styled.div`
     box-shadow: 2px 2px 3px #00000077;
   }
   &:focus {
-    box-shadow: 0px 0px 1px 1px #8000FF;
+    box-shadow: 0px 0px 0px 1px #8000FF;
   }
   &:active {
     transform: translate(1px, 1px);
