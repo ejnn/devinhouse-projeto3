@@ -1,13 +1,15 @@
 import './App.css';
-import Test from './Test';
+import Button from './Button';
 import Trash from './utils/trash icon.svg'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Test square action={() => console.log("action")}><img src={Trash} alt='trash icon' /></Test>
-        <Test>Comprar</Test>
+        <Button square action={() => console.log("action")}>
+          <img src={Trash} alt='trash icon' />
+        </Button>
+        <Button>Comprar</Button>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
