@@ -1,14 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import { createServer } from 'miragejs';
-
-
+import Button from './components/Button.styled';
+import Trash from './assets/trash icon.svg'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Button width='44px' action={() => console.log("action")}>
+          <img src={Trash} alt='trash icon' />
+        </Button>
+        <Button>Comprar</Button>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
