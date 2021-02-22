@@ -15,7 +15,7 @@ const SButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: ${props => (props.width) ? props.width : "100%"};
+  width: ${props => props.width || "100%"};
   &:hover {
     box-shadow: 2px 2px 3px #00000077;
   }
