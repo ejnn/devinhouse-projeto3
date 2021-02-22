@@ -15,7 +15,7 @@ const SButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: ${props => (props.square) ? "44px" : "100%"};
+  width: ${props => (props.width) ? props.width : "100%"};
   &:hover {
     box-shadow: 2px 2px 3px #00000077;
   }
@@ -30,9 +30,9 @@ const SButton = styled.button`
 `;
 
 export default function Button(props) {
-  const { square, action, children } = props;
+  const { width, action, children } = props;
   return (
-    <SButton onClick={action} square={square} >
+    <SButton onClick={action} width={width} >
       {children}
     </SButton>
   );

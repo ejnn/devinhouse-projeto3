@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button square action={() => console.log("action")}>
+        <Button width='44px' action={() => console.log("action")}>
           <img src={Trash} alt='trash icon' />
         </Button>
         <Button>Comprar</Button>
