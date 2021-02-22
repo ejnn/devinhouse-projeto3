@@ -15,6 +15,7 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: ${props => (props.square) ? "44px" : "100%"};
   &:hover {
     box-shadow: 2px 2px 3px #00000077;
   }
@@ -29,8 +30,9 @@ const Button = styled.button`
 `;
 
 export default function Test(props) {
+  const { square, action } = props;
   return (
-      <Button onClick={props.function}>
+      <Button onClick={action} square={square} >
         {props.children}
       </Button>
   );

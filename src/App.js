@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Test><img src={Trash} alt='trash icon' /></Test>
+        <Test square action={() => console.log("action")}><img src={Trash} alt='trash icon' /></Test>
         <Test>Comprar</Test>
         <p>
           Edit <code>src/App.js</code> and save to reload.
