@@ -1,6 +1,6 @@
 import './App.css';
 import Button from './components/Button.styled';
-import Trash from './images/trash icon.svg'
+import Trash from './assets/trash icon.svg'
 
 function App() {
   return (
