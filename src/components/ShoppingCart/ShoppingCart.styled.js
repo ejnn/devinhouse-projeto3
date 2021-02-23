@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CartIcon from '../assets/shopping cart icon.svg'
+import CartIcon from '../../assets/shopping cart icon.svg'
 
 const ShoppingCartWrapper = styled.div`
   background-color: #EBD7FF;
