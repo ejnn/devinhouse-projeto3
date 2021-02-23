@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import CartIcon from '../../assets/shopping cart icon.svg'
+import CartIcon from 'assets/shopping cart icon.svg'
 
-const ShoppingCartWrapper = styled.div`
+export const ShoppingCartWrapper = styled.div`
   background-color: #EBD7FF;
   border-radius: 50%;
   width: 52px;
@@ -25,7 +25,7 @@ const ShoppingCartWrapper = styled.div`
   
 `;
 
-const Notifications = styled.div`
+export const Notifications = styled.div`
   border-radius: 50%;
   background-color: red;
   color: white;
@@ -39,12 +39,3 @@ const Notifications = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-export default function ShoppingCart({notification, ...props }) {
-  return (
-    <ShoppingCartWrapper tabIndex='0'>
-      <img width='28px' height='28px' src={CartIcon} alt="Shopping Cart Icon"/>
-      {notification && <Notifications>{notification}</Notifications>}
-    </ShoppingCartWrapper>
-  )
-}
