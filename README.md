@@ -14,7 +14,7 @@
 + ⚛️ React
 + Redux
 + Styled Components
-+ React Router Dom
++ React Router DOM
 
 ## Recursos
 + [Design guideline](https://www.figma.com/file/xcPfzouOFGHALmaI729dU8/Desafio-Front-end-SENAI?node-id=0%3A1)
