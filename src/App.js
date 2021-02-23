@@ -1,49 +1,50 @@
 import { useSelector } from "react-redux";
 import { themeSelector } from "redux/slices/theme.js";
 import { ThemeProvider } from "styled-components";
+import Header from 'components/Header';
 
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route
+  BrowserRouter as Router,
+  Switch,
+  Route
 } from "react-router-dom";
 
 
 function App() {
 
-    const theme = useSelector(themeSelector);
+  const theme = useSelector(themeSelector());
 
-    return (
-	<ThemeProvider theme={theme}>
+  return (
+    <ThemeProvider theme={theme}>
 
-	    <Router>
+      <Router>
+        <Header />
+        {/* <header> ~ Header ~ </header> */}
 
-		<header> ~ Header ~ </header>
-		
-		<Switch>
+        <Switch>
 
-		    <Route path="/busca/:query">
-			<div> ~ Busca de produtos ~ </div>
-		    </Route>
+          <Route path="/busca/:query">
+            <div> ~ Busca de produtos ~ </div>
+          </Route>
 
-		    <Route path="/detalhes">
-			<div> ~ Detalhes ~ </div>
-		    </Route>
+          <Route path="/detalhes">
+            <div> ~ Detalhes ~ </div>
+          </Route>
 
-		    <Route path="/carrinho">
-			<div> ~ Carrinho ~ </div>
-		    </Route>
+          <Route path="/carrinho">
+            <div> ~ Carrinho ~ </div>
+          </Route>
 
-		    <Route path="/">
-			<div> ~ Listagem de produtos ~ </div>
-		    </Route>
+          <Route path="/">
+            <div> ~ Listagem de produtos ~ </div>
+          </Route>
 
-		</Switch>
+        </Switch>
 
-	    </Router>
+      </Router>
 
-	</ThemeProvider>
-    );
+    </ThemeProvider>
+  );
 }
 
 export default App;
