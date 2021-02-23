@@ -2,12 +2,46 @@ import { useSelector } from "react-redux";
 import { themeSelector } from "redux/slices/theme.js";
 import { ThemeProvider } from "styled-components";
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
+
+
 function App() {
-    const theme = useSelector(themeSelector());
+
+    const theme = useSelector(themeSelector);
 
     return (
 	<ThemeProvider theme={theme}>
-	    <div> ~ Shopee ~ </div>
+
+	    <Router>
+
+		<header> ~ Header ~ </header>
+		
+		<Switch>
+
+		    <Route path="/busca/:query">
+			<div> ~ Busca de produtos ~ </div>
+		    </Route>
+
+		    <Route path="/detalhes">
+			<div> ~ Detalhes ~ </div>
+		    </Route>
+
+		    <Route path="/carrinho">
+			<div> ~ Carrinho ~ </div>
+		    </Route>
+
+		    <Route path="/">
+			<div> ~ Listagem de produtos ~ </div>
+		    </Route>
+
+		</Switch>
+
+	    </Router>
+
 	</ThemeProvider>
     );
 }
