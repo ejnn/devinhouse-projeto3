@@ -14,5 +14,5 @@
 + ⚛️ React
 
 ## Recursos
-+ Guideline https://www.figma.com/file/xcPfzouOFGHALmaI729dU8/Desafio-Front-end-SENAI?node-id=0%3A1
-+ API https://github.com/luanfelipecosta/fake-product-api
++ [Design guideline](https://www.figma.com/file/xcPfzouOFGHALmaI729dU8/Desafio-Front-end-SENAI?node-id=0%3A1)
++ [API](https://github.com/luanfelipecosta/fake-product-api)
