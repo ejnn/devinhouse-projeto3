@@ -25,7 +25,7 @@ const themeReducer = (state = initialState, action) => {
     }
 };
 
-const themeSelector = () => (state) => state.theme.currentTheme;
+const themeSelector = (state) => state.theme.currentTheme;
 
 export { themeSelector };
 

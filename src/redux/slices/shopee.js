@@ -10,10 +10,8 @@ const initialState = {
 const shopeeReducer = (state = initialState, action) => {
 };
 
-const fetchProducts = async () => () => apiFetchProducts();
-};
+const fetchProducts = () => async () => apiFetchProducts();
 
-const queryProducts = async (query) => () => apiQueryProducts(query);
-};
+const queryProducts = (query) => async () => apiQueryProducts(query);
 
 export { fetchProducts, queryProducts };
