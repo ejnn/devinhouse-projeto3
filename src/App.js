@@ -1,6 +1,7 @@
 import './App.css';
 import Button from './components/Button.styled';
 import Trash from './assets/trash icon.svg'
+import ShoppingCart from './components/ShoppingCart.styled';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <img src={Trash} alt='trash icon' />
         </Button>
         <Button>Comprar</Button>
+        <ShoppingCart notification='2' />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
