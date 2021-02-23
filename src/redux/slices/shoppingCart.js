@@ -1,7 +1,18 @@
+const undefinedKeysReturnZero = {
+    get: (target, property, receiver) => {
+	if (typeof target[property] == "undefined") {
+	    return 0;
+	}
+
+	return target[property];
+    },
+};
+
 const initialState = {
     items: [],
-    itemCount: {},
+    itemCount: new Proxy({}, undefinedKeysReturnZero),
 };
+
 
 const shoppingCartReducer = (state = initialState, action) => {
 
@@ -47,6 +58,9 @@ const shoppingCartReducer = (state = initialState, action) => {
 	    itemCount: {...state.itemCount, [itemId]: state.itemCount[itemId] - 1},
 	};
 
+    case "shoppingCart/resetCart":
+	return initialState;
+
     default:
 	return state;
     }
@@ -62,10 +76,14 @@ const removeItem = (itemData) => ({
     payload: itemData,
 });
 
-const itemCountSelector = (id) => (state) => state.shoppingCart.itemsCount[id];
+const resetCart = () => ({
+    type: "shoppingCart/resetCart",
+});
+
+const itemCountSelector = (id) => (state) => state.shoppingCart.itemCount[id];
 
 
-export { addItem, removeItem };
+export { addItem, removeItem, resetCart };
 
 export { itemCountSelector };
 
