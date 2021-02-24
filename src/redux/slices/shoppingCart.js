@@ -3,68 +3,78 @@ const undefinedKeysReturnZero = {
 	if (typeof target[property] == "undefined") {
 	    return 0;
 	}
-
+	
 	return target[property];
     },
 };
 
+const createItemCountProxy = (baseObject) => new Proxy(baseObject, undefinedKeysReturnZero);
+
 const initialState = {
     items: [],
-    itemCount: new Proxy({}, undefinedKeysReturnZero),
+    itemCount: createItemCountProxy({}),
 };
 
 
 const shoppingCartReducer = (state = initialState, action) => {
-
+    
     switch (action.type) {
-
+	
     case "shoppingCart/addItem":
-
+	
 	var itemId = action.payload.id;
-
+	
 	if (state.itemCount[itemId] == 0) {
 	    return {
 		items: [...state.items, action.payload],
-		itemCount: {...state.itemCount, [itemId]: 1},
+		itemCount: createItemCountProxy({...state.itemCount,
+						 [itemId]: 1}),
 	    };
 	} 
-
+	
 	return {
 	    items: state.items,
-	    itemCount: {...state.itemCount, [itemId]: state.itemCount[itemId] + 1},
+	    itemCount: createItemCountProxy({...state.itemCount,
+					     [itemId]: state.itemCount[itemId] + 1}),
 	};
-
+	
     case "shoppingCart/removeItem":
-
+	
 	var itemId = action.payload.id;
-
+	
 	if (state.itemCount[itemId] <= 0) {
 	    return state;
 	}
-
+	
 	if (state.itemCount[itemId] == 1) {
-
+	    
 	    const itemCountCopy = Object.assign(state.itemCount, {});
 	    delete itemCountCopy[itemId];
-
+	    
 	    return {
 		items: state.items.filter(item => item.id != itemId),
-		itemCount: new Proxy(itemCountCopy, undefinedKeysReturnZero),
+		itemCount: createItemCountProxy(itemCountCopy),
 	    }
 	}
-
+	
 	return {
 	    items: state.items,
-	    itemCount: {...state.itemCount, [itemId]: state.itemCount[itemId] - 1},
+	    itemCount: createItemCountProxy({...state.itemCount,
+					     [itemId]: state.itemCount[itemId] - 1}),
 	};
-
+	
     case "shoppingCart/resetCart":
 	return initialState;
-
+	
     default:
 	return state;
     }
 };
+
+export default shoppingCartReducer;
+
+
+// action creators
 
 const addItem = (itemData) => ({
     type: "shoppingCart/addItem",
@@ -80,11 +90,21 @@ const resetCart = () => ({
     type: "shoppingCart/resetCart",
 });
 
+export {
+    addItem,
+    removeItem,
+    resetCart
+};
+
+
+// selectors
+
 const itemCountSelector = (id) => (state) => state.shoppingCart.itemCount[id];
 
+const distinctItemsCountSelector = () => (state) => state.shoppingCart.items.length;
 
-export { addItem, removeItem, resetCart };
+export {
+    itemCountSelector,
+    distinctItemsCountSelector,
+};
 
-export { itemCountSelector };
-
-export default shoppingCartReducer;

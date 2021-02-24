@@ -1,17 +1,18 @@
-import {
-    fetchProducts as apiFetchProducts,
-    queryProducts as apiQueryProducts,
-} from "utils/api";
+import * as fakeProductAPI from "utils/fake-product-api";
 
-const initialState = {
-    items: [],
+// actions
+
+const fetchProducts = () => async () => fakeProductAPI.fetchProducts();
+
+const queryProducts = (query) => async () => fakeProductAPI.queryProducts(query);
+
+const getItem = (id) => async () => {
+    return fakeProductAPI.fetchProducts()
+	.then(ret => ret.filter(item => item.id == id)[0]);
 };
 
-const shopeeReducer = (state = initialState, action) => {
+export {
+    fetchProducts,
+    queryProducts,
+    getItem,
 };
-
-const fetchProducts = () => async () => apiFetchProducts();
-
-const queryProducts = (query) => async () => apiQueryProducts(query);
-
-export { fetchProducts, queryProducts };
