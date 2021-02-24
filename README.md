@@ -7,7 +7,7 @@
 + Eduardo Jorge Nicolau 👽
 + Guilherme Noronha da Silva ♨️
 + Gustavo Luchi da Silva 🐧
-+ Murilo Sartori
++ Murilo Sartori 🍺
 
 ## 🗄️ Tecnologias
 
