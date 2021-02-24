@@ -4,7 +4,7 @@ import Trash from './assets/trash icon.svg'
 import ShoppingCart from './components/ShoppingCart/ShoppingCart.styled';
 
 /* meu import */
-import CardWrapper from "./components/Card/CardWrapper";
+import Card from "./components/ProductCard";
 
 const items = {
   id: 43900,
@@ -38,7 +38,7 @@ function App() {
         </a>
       </header>
       {/*APENAS PARA TESTE - DELETAR PARA O CASO DE CONFLITO */}
-      <CardWrapper data={items}/>
+      <Card data={items}/>
     </div>
   );
 }

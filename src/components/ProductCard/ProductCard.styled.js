@@ -48,6 +48,14 @@ export const PriceWrapper = styled.div`
   white-space: nowrap;
 `;
 
+export const CurrencySymbol = styled.span`
+  font: Roboto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+`;
+
 export const IntegerPartOfPrice = styled.span`
   font: Roboto;
   font-weight: 500;
@@ -64,6 +72,6 @@ export const DecimalPartOfPrice = styled.span`
   line-height: 24px;
 `;
 
-export const SubTotal = styled.span`
+export const Parcela = styled.span`
   font: Roboto;
 `;

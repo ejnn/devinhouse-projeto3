@@ -3,24 +3,29 @@ import {
   Image,
   Title,
   PriceWrapper,
+  CurrencySymbol,
   IntegerPartOfPrice,
   DecimalPartOfPrice,
-  SubTotal,
-} from "./CardWrapper.styled";
+  Parcela,
+} from "./ProductCard.styled";
 
-export default function Card({ data }) {
+export default function ProductCard({ data }) {
   const number = data.price;
   const localePrice = number.toLocaleString("pt-BR", {
     maximumFractionDigits: 2,
     style: "currency",
     currency: "BRL",
   });
+
+  const regexCurrencySymbol = new RegExp("[^0-9,.\s]*", "g"); 
+  const currencySymbol = regexCurrencySymbol.exec(localePrice)[0];
+  console.log("parte inteira", currencySymbol);
+  
   const regex = new RegExp(".+(?=,)", "g");
   const integerPart = regex.exec(localePrice)[0];
   const decimalPart = localePrice.replace(regex, "");
 
-  /* checar se o número mágico 10 é ok ou fazer uma constante*/
-  const subTotal = (data.price / 10).toLocaleString("pt-BR", {
+  const parcela = (data.price / 10).toLocaleString("pt-BR", {
     maximumFractionDigits: 2,
     style: "currency",
     currency: "BRL",
@@ -31,13 +36,12 @@ export default function Card({ data }) {
       <Image src={data.image} alt="Product image" />
       <Title>{data.name}</Title>
       <PriceWrapper>
-        {/* Checar se essa div é ok no meio do componente */}
         <div>
+          <CurrencySymbol>{currencySymbol}</CurrencySymbol>
           <IntegerPartOfPrice>{integerPart}</IntegerPartOfPrice>
           <DecimalPartOfPrice>{decimalPart}</DecimalPartOfPrice>
         </div>
-        {/* hardcode a parte "ou 10x de"? */}
-        <SubTotal>ou 10x de {subTotal}</SubTotal>
+        <Parcela>ou 10x de {parcela}</Parcela>
       </PriceWrapper>
       {/* Colocar o componente botao aqui*/}
     </CardWrapper>
