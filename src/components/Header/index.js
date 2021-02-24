@@ -1,8 +1,10 @@
+import StyledHeader from './Header.styled'
+import Title from './Title.styled'
 
 export default function Header() {
   return (
-    <div>
-      Header
-    </div>
+    <StyledHeader>
+      <Title>Shopee</Title>
+    </StyledHeader>
   )
 }
