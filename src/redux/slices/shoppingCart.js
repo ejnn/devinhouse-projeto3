@@ -8,7 +8,7 @@ const undefinedKeysReturnZero = {
     },
 };
 
-const createItemCountProxy(baseObject) => new Proxy(baseObject, undefinedKeysReturnZero);
+const createItemCountProxy = (baseObject) => new Proxy(baseObject, undefinedKeysReturnZero);
 
 const initialState = {
     items: [],
