@@ -33,7 +33,7 @@ export const Title = styled.span`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-/*   
+  /*   
   max de duas linhas. Truncar dps disso
   white-space: nowrap;
   overflow: hidden;
@@ -41,12 +41,12 @@ export const Title = styled.span`
 `;
 
 export const PriceWrapper = styled.div`
-height: 24px;
-width: 74px;
-left: 172px;
-top: 506px;
-white-space: nowrap;
-`
+  height: 24px;
+  width: 74px;
+  left: 172px;
+  top: 506px;
+  white-space: nowrap;
+`;
 
 export const IntegerPartOfPrice = styled.span`
   font: Roboto;
