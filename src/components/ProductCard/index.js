@@ -9,6 +9,8 @@ import {
   Parcela,
 } from "./ProductCard.styled";
 
+import ItemPurchaseButton from "components/ItemPurchaseButton";
+
 export default function ProductCard({ data }) {
   const number = data.price;
   const localePrice = number.toLocaleString("pt-BR", {
@@ -17,10 +19,10 @@ export default function ProductCard({ data }) {
     currency: "BRL",
   });
 
-  const regexCurrencySymbol = new RegExp("[^0-9,.\s]*", "g"); 
+  const regexCurrencySymbol = new RegExp("[^0-9,.s]*", "g");
   const currencySymbol = regexCurrencySymbol.exec(localePrice)[0];
   console.log("parte inteira", currencySymbol);
-  
+
   const regex = new RegExp(".+(?=,)", "g");
   const integerPart = regex.exec(localePrice)[0];
   const decimalPart = localePrice.replace(regex, "");
@@ -43,7 +45,7 @@ export default function ProductCard({ data }) {
         </div>
         <Parcela>ou 10x de {parcela}</Parcela>
       </PriceWrapper>
-      {/* Colocar o componente botao aqui*/}
+      <ItemPurchaseButton itemData={data} />
     </CardWrapper>
   );
 }

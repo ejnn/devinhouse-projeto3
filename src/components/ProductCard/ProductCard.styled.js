@@ -19,6 +19,7 @@ export const Image = styled.img`
   left: 172px;
   top: 200px;
   border-radius: 0px;
+  margin-bottom: 20px
 `;
 
 export const Title = styled.span`
@@ -29,10 +30,12 @@ export const Title = styled.span`
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: bolder;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  margin-bottom: 20px;
+
   /*   
   max de duas linhas. Truncar dps disso
   white-space: nowrap;
@@ -41,11 +44,10 @@ export const Title = styled.span`
 `;
 
 export const PriceWrapper = styled.div`
-  height: 24px;
-  width: 74px;
   left: 172px;
   top: 506px;
   white-space: nowrap;
+  margin-bottom: 20px
 `;
 
 export const CurrencySymbol = styled.span`
