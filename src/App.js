@@ -1,45 +1,50 @@
-import './App.css';
-import Button from './components/Button.styled';
-import Trash from './assets/trash icon.svg'
-import ShoppingCart from './components/ShoppingCart/ShoppingCart.styled';
+import { useSelector } from "react-redux";
+import { themeSelector } from "redux/slices/theme.js";
+import { ThemeProvider } from "styled-components";
+import Header from 'components/Header';
 
-/* meu import */
-import Card from "./components/ProductCard";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import BotaoVoltar from "components/BotaoVoltar";
 
-const items = {
-  id: 43900,
-  name: 'Duracell - AAA Batteries (4-Pack)',
-  price: 5.49,
-  description:
-    'Compatible with select electronic devices; AAA size; DURALOCK Power Preserve technology; 4-pack',
-  url:
-    'http://www.bestbuy.com/site/duracell-aaa-batteries-4-pack/43900.p?id=1051384074145&skuId=43900&cmp=RMXCC',
-  image: 'http://img.bbystatic.com/BestBuy_US/images/products/4390/43900_sa.jpg',
-}
+
 function App() {
+  const theme = useSelector(themeSelector());
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Button width='44px' action={() => console.log("action")}>
-          <img src={Trash} alt='trash icon' />
-        </Button>
-        <Button>Comprar</Button>
-        <ShoppingCart notification='9' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      {/*APENAS PARA TESTE - DELETAR PARA O CASO DE CONFLITO */}
-      <Card data={items}/>
-    </div>
+    <ThemeProvider theme={theme}>
+
+      <Router>
+        <Header />
+        {/* <header> ~ Header ~ </header> */}
+
+        <Switch>
+
+          <Route path="/busca/:query">
+            <div> ~ Busca de produtos ~ </div>
+          </Route>
+
+          <Route path="/detalhes">
+            <div> ~ Detalhes ~ </div>
+          </Route>
+
+          <Route path="/carrinho">
+            <div> ~ Carrinho ~ </div>
+          </Route>
+
+          <Route path="/">
+            <div> ~ Listagem de produtos ~ </div>
+            <BotaoVoltar />
+          </Route>
+
+        </Switch>
+
+      </Router>
+
+    </ThemeProvider>
   );
 }
 
