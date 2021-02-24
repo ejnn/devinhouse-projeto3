@@ -27,9 +27,7 @@ export const Title = styled.span`
   width: 215px;
   left: 172px;
   top: 442px;
-  font-family: Roboto;
   font-size: 18px;
-  font-style: normal;
   font-weight: bolder;
   line-height: 24px;
   letter-spacing: 0em;
@@ -50,30 +48,15 @@ export const PriceWrapper = styled.div`
   margin-bottom: 20px
 `;
 
-export const CurrencySymbol = styled.span`
-  font: Roboto;
-  font-weight: 500;
-  font-style: normal;
+export const PriceComplement = styled.span`
   font-size: 14px;
   line-height: 24px;
 `;
 
 export const IntegerPartOfPrice = styled.span`
-  font: Roboto;
-  font-weight: 500;
-  font-style: normal;
   font-size: 32px;
   line-height: 24px;
 `;
 
-export const DecimalPartOfPrice = styled.span`
-  font: Roboto;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-`;
-
 export const Parcela = styled.span`
-  font: Roboto;
 `;

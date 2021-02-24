@@ -3,9 +3,8 @@ import {
   Image,
   Title,
   PriceWrapper,
-  CurrencySymbol,
+  PriceComplement,
   IntegerPartOfPrice,
-  DecimalPartOfPrice,
   Parcela,
 } from "./ProductCard.styled";
 
@@ -21,7 +20,6 @@ export default function ProductCard({ data }) {
 
   const regexCurrencySymbol = new RegExp("[^0-9,.s]*", "g");
   const currencySymbol = regexCurrencySymbol.exec(localePrice)[0];
-  console.log("parte inteira", currencySymbol);
 
   const regex = new RegExp(".+(?=,)", "g");
   const integerPart = regex.exec(localePrice)[0];
@@ -39,9 +37,9 @@ export default function ProductCard({ data }) {
       <Title>{data.name}</Title>
       <PriceWrapper>
         <div>
-          <CurrencySymbol>{currencySymbol}</CurrencySymbol>
+          <PriceComplement>{currencySymbol}</PriceComplement>
           <IntegerPartOfPrice>{integerPart}</IntegerPartOfPrice>
-          <DecimalPartOfPrice>{decimalPart}</DecimalPartOfPrice>
+          <PriceComplement>{decimalPart}</PriceComplement>
         </div>
         <Parcela>ou 10x de {parcela}</Parcela>
       </PriceWrapper>
