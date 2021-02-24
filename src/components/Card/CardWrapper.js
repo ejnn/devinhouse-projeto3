@@ -10,9 +10,17 @@ const CardWrapper = styled.div`
   border-radius: 7px;
   background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
+  display: flex;
+  flex-direction: column;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  height: 226px;
+  width: 226px;
+  left: 172px;
+  top: 200px;
+  border-radius: 0px;
+`;
 
 const Title = styled.span`
   height: 48px;
@@ -26,7 +34,20 @@ const Title = styled.span`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+/*   
+  max de duas linhas. Truncar dps disso
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
 `;
+
+const PriceWrapper = styled.div`
+height: 24px;
+width: 74px;
+left: 172px;
+top: 506px;
+white-space: nowrap;
+`
 
 const Price = styled.span`
   font: Roboto;
@@ -36,7 +57,7 @@ const Price = styled.span`
   line-height: 24px;
 `;
 
-const CurrencyDecimal = styled.span`
+const DecimalNumber = styled.span`
   font: Roboto;
   font-weight: 500;
   font-style: normal;
@@ -44,17 +65,38 @@ const CurrencyDecimal = styled.span`
   line-height: 24px;
 `;
 
+const SubTotal = styled.span`
+  font: Roboto;
+`;
+
 export default function Card({ data }) {
   const number = data.price;
-  const localePrice = number.toLocaleString("pt-BR", {style: "currency", currency:"BRL"});
-  /* Checar como utilizar o splice para dividir a string após a vírgula e passar a variavel para o componente */
+  const localePrice = number.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+  const regex = new RegExp(".+(?=,)", "g");
+  const integerPart = regex.exec(localePrice)[0];
+  const decimalPart = localePrice.replace(regex, "");
+
+  /* checar sobre o número mágico 10*/
+  const subTotal = (data.price /10).toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+
   return (
     <CardWrapper>
-      <img src={data.image} alt="Product image" />
+      <Image src={data.image} alt="Product image" />
       <Title>{data.name}</Title>
-
-      <Price>{localePrice} </Price>
-      
+      <PriceWrapper>
+        <div>
+          <Price>{integerPart}</Price>
+          <DecimalNumber>{decimalPart}</DecimalNumber>
+        </div>
+        <SubTotal>ou 10x de {subTotal}</SubTotal>
+      </PriceWrapper>
+      {/* Colocar o componente botao */}
     </CardWrapper>
   );
 }
