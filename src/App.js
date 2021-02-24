@@ -12,7 +12,6 @@ import BotaoVoltar from "components/BotaoVoltar";
 
 
 function App() {
-
   const theme = useSelector(themeSelector());
 
   return (
