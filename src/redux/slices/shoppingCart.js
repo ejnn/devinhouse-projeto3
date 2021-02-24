@@ -49,7 +49,7 @@ const shoppingCartReducer = (state = initialState, action) => {
 
 	    return {
 		items: state.items.filter(item => item.id != itemId),
-		itemCount: itemCountCopy,
+		itemCount: new Proxy(itemCountCopy, undefinedKeysReturnZero),
 	    }
 	}
 
