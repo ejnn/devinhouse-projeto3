@@ -1,15 +1,6 @@
-/* imagem, pricewraper, pricecomplement, integerpartofprice */
 import styled from "styled-components";
 
-export const Image = styled.img`
-  height: 226px;
-  width: 226px;
-  left: 172px;
-  top: 200px;
-  border-radius: 0px;
-`;
-
-export const PriceWrapper = styled.div`
+export const Wrapper = styled.div`
   left: 172px;
   top: 506px;
   white-space: nowrap;

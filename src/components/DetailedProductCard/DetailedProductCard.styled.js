@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProductDetailCardWrapper = styled.div`
+export const DetailedCardContentWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   height: 260px;
@@ -12,14 +12,22 @@ export const ProductDetailCardWrapper = styled.div`
   padding: 32px
 `;
 
-export const DetailWrapper = styled.div`
+export const SecondHalfWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 32px;
 `;
 
-export const DescriptionWrapper = styled.div`
+export const ProductDescription = styled.div`
   size: 16px;
   line-height: 24px;
+`;
+
+export const ProductImage = styled.img`
+  height: 226px;
+  width: 226px;
+  left: 172px;
+  top: 200px;
+  border-radius: 0px;
 `;

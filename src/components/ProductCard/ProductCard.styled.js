@@ -34,3 +34,11 @@ export const Title = styled.span`
   text-overflow: ellipsis;
   white-space: nowrap;*/
 `;
+
+export const ProductImage = styled.img`
+  height: 226px;
+  width: 226px;
+  left: 172px;
+  top: 200px;
+  border-radius: 0px;
+`;
