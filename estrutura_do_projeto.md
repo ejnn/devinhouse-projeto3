@@ -50,12 +50,12 @@
     + Price (total)
     + Button (Finalizar compra)
 
-Header - Gustavo e Bruno
-Title - Bruno
-ProductsGrid - Gui e David
-GoBackButton - Murilo
-DetailedProductCard - Gui e David
-ProductTableWrapper - Murilo e Gustavo
-CheckoutControlsWrapper - Murilo e Gustavo
-Router - Eduardo
-Redux - Eduardo
++ Header - Gustavo e Bruno
++ Title - Bruno
++ ProductsGrid - Gui e David
++ GoBackButton - Murilo
++ DetailedProductCard - Gui e David
++ ProductTableWrapper - Murilo e Gustavo
++ CheckoutControlsWrapper - Murilo e Gustavo
++ Router - Eduardo
++ Redux - Eduardo
