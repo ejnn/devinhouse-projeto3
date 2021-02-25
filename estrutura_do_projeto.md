@@ -50,6 +50,8 @@
     + Price (total)
     + Button (Finalizar compra)
 
+
+## Responsabilidades
 + Header - Gustavo e Bruno
 + Title - Bruno
 + ProductsGrid - Gui e David
