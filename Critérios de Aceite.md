@@ -1,4 +1,4 @@
-#Header
+# Header
 - [ ] deve estar presente em ​ TODAS AS PÁGINAS​ .
 - [ ] Deve conter: logo, barra de busca, e botão do carrinho, informando quantos itens (SKU's) foram selecionados.
 - [ ] O usuário poderá digitar uma busca e clicar na lupa para pesquisar. Será direcionado a página de ​ Resultados de busca​ .
@@ -6,7 +6,7 @@
 - [ ] Ao clicar no logo, deve ser direcionado a página INICIAL de listagem
 - [ ] De acordo com as guidelines de estilo
 
-#Card de Produto
+# Card de Produto
 - [ ] O ​ Título​ do card e a ​ imagem​ devem ser CLICÁVEIS, direcionando para a página de detalhes​ .
 - [ ] Exibir foto, título do produto, preço e botão de comprar.
 - [x] O preço deve estar formatado em R$ 9999,00
