@@ -15,6 +15,7 @@ import ProductDetailsPage from "pages/ProductDetailsPage";
 import ShoppingCartPage from "pages/ShoppingCartPage";
 
 function App() {
+
     const theme = useSelector(themeSelector());
     
     return (
