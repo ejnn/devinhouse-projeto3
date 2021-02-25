@@ -103,8 +103,11 @@ const itemCountSelector = (id) => (state) => state.shoppingCart.itemCount[id];
 
 const distinctItemsCountSelector = () => (state) => state.shoppingCart.items.length;
 
+const cartedItemsSelector = () => (state) => state.shoppingCart.items;
+
 export {
     itemCountSelector,
     distinctItemsCountSelector,
+    cartedItemsSelector,
 };
 
