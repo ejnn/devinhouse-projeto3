@@ -7,7 +7,7 @@ const Input = styled.input`
   border: 0;
   padding: 0;
   width: 80%;
-  height: auto;
+  height: 40px;
   outline: none;
   ::placeholder {
     color: ${props => props.theme.colors.darkGray};
@@ -19,7 +19,7 @@ const Input = styled.input`
 export default function SearchButton() {
   return (
     <SSearchButton>
-      
+
       <Input type='text' placeholder='Buscar...' />
       <SearchIcon />
     </SSearchButton>

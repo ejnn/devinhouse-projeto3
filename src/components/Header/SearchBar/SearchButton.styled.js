@@ -9,6 +9,7 @@ height: 44px;
 padding: 10px 32px;
 border-radius: 54px;
 box-sizing: border-box;
+height: 100%;
 background-color: ${props => props.theme.colors.lightGray};
 :focus-within {
 border: 1px solid ${props => props.theme.colors.text};
