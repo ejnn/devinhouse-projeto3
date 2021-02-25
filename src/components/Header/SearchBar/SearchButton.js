@@ -19,7 +19,7 @@ const Input = styled.input`
 export default function SearchButton() {
   return (
     <SSearchButton>
-
+      
       <Input type='text' placeholder='Buscar...' />
       <SearchIcon />
     </SSearchButton>
