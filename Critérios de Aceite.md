@@ -8,11 +8,11 @@
 
 # Card de Produto
 - [ ] O ​ Título​ do card e a ​ imagem​ devem ser CLICÁVEIS, direcionando para a página de detalhes​ .
-- [ ] Exibir foto, título do produto, preço e botão de comprar.
+- [x] Exibir foto, título do produto, preço e botão de comprar.
 - [x] O preço deve estar formatado em R$ 9999,00
 - [ ] Seguir as regras de design (espaçamento, cores, etc)
 - [x] O preço mostrado no card é unitário, e NÃO baseado na QUANTIDADE.
-- [ ] ** Alem das informações anteriores, também é exibida a descrição do produto
+- [x] ** Alem das informações anteriores, também é exibida a descrição do produto
 - [ ] ** Também é possível adicionar / remover o produto do carrinho pela página de detalhes.
 - [ ] De acordo com as guidelines de estilo
 
