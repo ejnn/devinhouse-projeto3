@@ -27,12 +27,12 @@ export const Title = styled.span`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  overflow: hidden; 
-  
-  /*   
-  max de duas linhas. Truncar dps disso
+  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;*/
+  white-space: nowrap;
+  &:hover {
+    overflow:visible;
+  }
 `;
 
 export const ProductImage = styled.img`
