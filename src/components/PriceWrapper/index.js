@@ -1,4 +1,4 @@
-import {Wrapper,PriceComplement,IntegerPartOfPrice,Parcela } from "./PriceWrapper.styled";
+import {Wrapper,PriceComplement,IntegerPartOfPrice,Installment } from "./PriceWrapper.styled";
 
 export default function PriceWrapper({ price }) {
     const number = price;
@@ -28,7 +28,7 @@ export default function PriceWrapper({ price }) {
                 <IntegerPartOfPrice>{integerPart}</IntegerPartOfPrice>
                 <PriceComplement>{decimalPart}</PriceComplement>
             </div>
-            <Parcela>ou 10x de {parcela}</Parcela>
+            <Installment>ou 10x de {parcela}</Installment >
         </Wrapper>
 
     );

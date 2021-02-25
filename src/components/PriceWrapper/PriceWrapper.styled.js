@@ -17,7 +17,7 @@ export const IntegerPartOfPrice = styled.span`
   line-height: 24px;
 `;
 
-export const Parcela = styled.span`
+export const Installment = styled.span`
   font-size: 12px;
   line-height: 24px;
 `;
