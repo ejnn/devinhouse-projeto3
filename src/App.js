@@ -8,10 +8,10 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import BotaoVoltar from "components/BotaoVoltar";
 
 
 function App() {
-
   const theme = useSelector(themeSelector());
 
   return (
@@ -37,6 +37,7 @@ function App() {
 
           <Route path="/">
             <div> ~ Listagem de produtos ~ </div>
+            <BotaoVoltar />
           </Route>
 
         </Switch>
