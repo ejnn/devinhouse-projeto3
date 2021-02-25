@@ -15,6 +15,7 @@ const SButton = styled.button`
   justify-content: center;
   align-items: center;
   width: ${props => props.width || "100%"};
+  max-width: 226px;
   &:hover {
     box-shadow: 2px 2px 3px #00000077;
   }
