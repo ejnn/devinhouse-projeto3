@@ -5,15 +5,16 @@ import {
   ProductImage,
 } from "./DetailedProductCard.styled";
 import ItemPurchaseButton from "components/ItemPurchaseButton";
+import PriceWrapper from "components/PriceWrapper";
 
-export default function DetailedProductCard({ data }) {
+export default function DetailedProductCard({ itemData }) {
   return (
     <DetailedCardContentWrapper>
-      <ProductImage src={data.image} alt="Product image" />
+      <ProductImage src={itemData.image} alt="Product image" />
       <SecondHalfWrapper>
-        <ProductDescription>{data.description}</ProductDescription>
-        <PriceWrapper price={data.price}/>
-        <ItemPurchaseButton itemData={data} />
+        <ProductDescription>{itemData.description}</ProductDescription>
+        <PriceWrapper price={itemData.price}/>
+        <ItemPurchaseButton itemData={itemData} />
       </SecondHalfWrapper>
     </DetailedCardContentWrapper>
   );

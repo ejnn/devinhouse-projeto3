@@ -1,4 +1,9 @@
-import {Wrapper,PriceComplement,IntegerPartOfPrice,Installment } from "./PriceWrapper.styled";
+import {
+    Wrapper,
+    PriceComplement,
+    IntegerPartOfPrice,
+    Installment 
+} from "./PriceWrapper.styled";
 
 export default function PriceWrapper({ price }) {
     const number = price;
@@ -15,7 +20,7 @@ export default function PriceWrapper({ price }) {
     const integerPart = regex.exec(localePrice)[0];
     const decimalPart = localePrice.replace(regex, "");
 
-    const parcela = (data.price / 10).toLocaleString("pt-BR", {
+    const parcela = (price / 10).toLocaleString("pt-BR", {
         maximumFractionDigits: 2,
         style: "currency",
         currency: "BRL",
@@ -30,8 +35,5 @@ export default function PriceWrapper({ price }) {
             </div>
             <Installment>ou 10x de {parcela}</Installment >
         </Wrapper>
-
     );
-
-
 }

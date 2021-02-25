@@ -12,6 +12,8 @@ const SAmountControlsWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     font-size: 2rem;
+    width: ${props => props.width || "100%"};
+    max-width: 226px;
 `;
 
 const SChangeAmountButton = styled(Button)`
