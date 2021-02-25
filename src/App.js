@@ -19,8 +19,6 @@ function App() {
 
       <Router>
         <Header />
-        {/* <header> ~ Header ~ </header> */}
-
         <Switch>
 
           <Route path="/busca/:query">

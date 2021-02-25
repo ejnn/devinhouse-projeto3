@@ -11,18 +11,18 @@ const lightTheme = {
 }
 
 const initialState = {
-    theme: "light",
-    currentTheme: lightTheme,
+  theme: "light",
+  currentTheme: lightTheme,
 };
 
 const themeReducer = (state = initialState, action) => {
 
-    switch (action.type) {
+  switch (action.type) {
 
     default:
-	return state;
+      return state;
 
-    }
+  }
 };
 
 const themeSelector = () => (state) => state.theme.currentTheme;

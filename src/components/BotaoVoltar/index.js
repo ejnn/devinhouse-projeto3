@@ -3,7 +3,7 @@ import { PositionButton, BackButton } from 'components/BotaoVoltar/BotaoVoltar.s
 
 const BotaoVoltar = () => {
   const history = useHistory();
-  return(
+  return (
     <PositionButton>
       <BackButton onClick={history.goBack}>Voltar</BackButton>
     </PositionButton>
