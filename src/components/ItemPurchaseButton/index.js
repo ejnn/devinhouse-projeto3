@@ -17,7 +17,7 @@ export default function ItemPurchaseButton({ itemData }) {
     const addToCart = () => dispatch(addItem(itemData));
     const removeFromCart = () => dispatch(removeItem(itemData));
 
-
+	
     if (amountInCart == 0) {
 	return <AddToCartButton handleClick={addToCart}/>;
     } else {

@@ -1,15 +1,12 @@
+import { CardWrapper, Title } from "./ProductCard.styled";
+import ItemPurchaseButton from "components/ItemPurchaseButton";
 import {
-  CardWrapper,
   Image,
-  Title,
   PriceWrapper,
   PriceComplement,
   IntegerPartOfPrice,
   Parcela,
-} from "./ProductCard.styled";
-
-import ItemPurchaseButton from "components/ItemPurchaseButton";
-
+} from "../Card.styled";
 export default function ProductCard({ data }) {
   const number = data.price;
   const localePrice = number.toLocaleString("pt-BR", {
