@@ -1,8 +1,9 @@
 import StyledHeader from './Header.styled'
-import { Title } from './Title.styled'
+import { ShopeeLogo } from './ShopeeLogo.styled'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import ShoppingCart from './ShoppingCart'
+import ShoppingCartButton from './ShoppingCartButton'
+import SearchBar from './SearchBar'
 
 const Home = styled(Link)`
   text-decoration: none;
@@ -12,9 +13,10 @@ export default function Header() {
   return (
     <StyledHeader>
       <Home to='/'>
-        <Title>Shopee</Title>
+        <ShopeeLogo>Shopee</ShopeeLogo>
       </Home>
-      <ShoppingCart />
+      <SearchBar />
+      <ShoppingCartButton />
     </StyledHeader>
   )
 }

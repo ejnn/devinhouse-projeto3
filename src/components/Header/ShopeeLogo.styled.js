@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const Title = styled.h1`
-  color: #8000FF;
+export const ShopeeLogo = styled.h1`
+  color: ${props => props.theme.colors.primary};
   font-weight: 700;
-  font-size: 48px;
+  font-size: max(2vw, 32px);
   letter-spacing: 10px;
   margin: 0;
   padding: 0;
@@ -16,4 +16,4 @@ export const Title = styled.h1`
   }
 `;
 
-export default Title
+export default ShopeeLogo
