@@ -7,7 +7,10 @@ export default function SearchButton() {
   const textSearch = useRef(null);
   const history = useHistory();
 
-  const goToSearchPage = () => history.push(`/busca/${textSearch.current.value}`)
+  const goToSearchPage = () => {
+    history.push(`/busca/${textSearch.current.value}`)
+    textSearch.current.value = '';
+  }
   const searchOnEnter = event => {
     if (event.key == 'Enter') {
       goToSearchPage()
