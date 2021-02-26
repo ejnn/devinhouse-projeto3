@@ -1,4 +1,4 @@
-import { StyledHeader, RightHeader } from './Header.styled'
+import { StyledHeader, RightSideWrapper } from './Header.styled'
 import styled from 'styled-components'
 import ShoppingCartButton from './ShoppingCartButton'
 import SearchBar from './SearchBar'
@@ -10,10 +10,10 @@ export default function Header() {
   return (
     <StyledHeader>
       <ShopeeLogo />
-      <RightHeader>
+      <RightSideWrapper>
         <SearchBar />
         <ShoppingCartButton />
-      </RightHeader>
+      </RightSideWrapper>
     </StyledHeader>
   )
 }

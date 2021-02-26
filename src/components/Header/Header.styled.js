@@ -10,13 +10,12 @@ export const StyledHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
-  @media (max-width:600px){
+  @media (max-width:600px) {
     flex-wrap: wrap;
     padding: 12px;
   }
-    
 `
-export const RightHeader = styled.div`
+export const RightSideWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
