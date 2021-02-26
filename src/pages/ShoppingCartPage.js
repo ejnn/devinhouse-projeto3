@@ -1,6 +1,5 @@
 import ProductTableWrapper from "components/Cart/ProductTableWrapper";
 import { SContent } from "components/Cart/ShoppingCartPage.styled";
-import Title from "components/Header/Title.styled";
 import { useSelector } from "react-redux";
 
 import {
@@ -13,8 +12,6 @@ const ShoppingCartPage = ({ }) => {
 
   return (
     <SContent>
-      {/* <div> {JSON.stringify(cartedItems)} </div> */}
-      <Title>Carrinho</Title>
       <ProductTableWrapper items={cartedItems} />
     </SContent>
   );

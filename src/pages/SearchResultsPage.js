@@ -16,7 +16,7 @@ const SearchResultsPage = ({ query }) => {
 
     useEffect(() => {
 	dispatch(queryProducts(query));
-    }, []);
+    }, [query]);
     
     return (
 	<>
