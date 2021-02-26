@@ -1,23 +1,33 @@
-import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import { queryProducts } from "redux/slices/shopee";
+import {
+    queryProducts,
+    queryProductsStatusSelector,
+    productsSelector,
+} from "redux/slices/shopee";
 
 const SearchResultsPage = ({ query }) => {
 
     const dispatch = useDispatch();
 
-    const [searchResults, setSearchResults] = useState({});
+    const products = useSelector(productsSelector());
+    const queryStatus = useSelector(queryProductsStatusSelector());
 
-    useEffect(async () => {
-	dispatch(queryProducts(query))
-	    .then(ret => setSearchResults(ret));
-    },[]);
+    useEffect(() => {
+	dispatch(queryProducts(query));
+    }, []);
     
     return (
 	<>
-	    <div> Pesquisa por {query}: </div>
-	    <div> {JSON.stringify(searchResults)} </div>
+	    <div> query for {query} status: {queryStatus} </div>
+	    <div>
+		{
+		    queryStatus == "pending"
+			? "~ here be skeletons ~"
+			: products.map(itemData => <div key={itemData.id}> {itemData.name} </div>)
+		}
+	    </div>
 	</>
     );
 };

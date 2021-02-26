@@ -3,7 +3,7 @@ import { createServer } from "miragejs";
 const makeServer = () => createServer({
     routes() {
 
-	this.namespace = "/api";
+	this.namespace = "api";
 	this.timing = 2500;
 
 	this.get("/fetchProducts", () => ({

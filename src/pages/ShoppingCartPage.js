@@ -3,7 +3,9 @@ import { SContent } from "components/Cart/ShoppingCartPage.styled";
 import Title from "components/Header/Title.styled";
 import { useSelector } from "react-redux";
 
-import { cartedItemsSelector } from "redux/slices/shoppingCart";
+import {
+    cartedItemsSelector
+} from "redux/slices/shoppingCart";
 
 const ShoppingCartPage = ({ }) => {
 
