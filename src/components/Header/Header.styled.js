@@ -9,6 +9,9 @@ const StyledHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
+  @media (max-width:600px){
+    flex-wrap: wrap;
+    
 `
 
 export default StyledHeader

@@ -4,7 +4,7 @@ export const SSearchButton = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: min(424px, 30%);
+width: max(424px, 30%);
 height: 44px;
 padding: 10px 32px;
 border-radius: 54px;
