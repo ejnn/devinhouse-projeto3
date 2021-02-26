@@ -17,17 +17,6 @@ export default function ItemPurchaseButton({ itemData }) {
   const addToCart = () => dispatch(addItem(itemData));
   const removeFromCart = () => dispatch(removeItem(itemData));
 
-<<<<<<< HEAD
-	
-    if (amountInCart == 0) {
-	return <AddToCartButton handleClick={addToCart}/>;
-    } else {
-	return <ItemAmountControls handleDecrease={removeFromCart}
-		    		   itemAmount={amountInCart}
-		    		   handleIncrease={addToCart}/>;
-    }
-=======
-
   if (amountInCart == 0) {
     return <AddToCartButton handleClick={addToCart} />;
   } else {
@@ -35,7 +24,6 @@ export default function ItemPurchaseButton({ itemData }) {
       itemAmount={amountInCart}
       handleIncrease={addToCart} />;
   }
->>>>>>> main
 }
 
 const AddToCartButton = ({ handleClick }) => {
