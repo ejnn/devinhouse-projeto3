@@ -20,11 +20,11 @@ const SChangeAmountButton = styled(Button)`
     max-width: 3rem;
 `;
 
-const STrashIcon = ({}) => <img src={trashIconPath} alt="Trash icon"/>;
+const STrashIcon = ({ }) => <img src={trashIconPath} alt="Trash icon" />;
 
 export {
-    SSingleButton,
-    SAmountControlsWrapper,
-    SChangeAmountButton,
-    STrashIcon,
+  SSingleButton,
+  SAmountControlsWrapper,
+  SChangeAmountButton,
+  STrashIcon,
 };
