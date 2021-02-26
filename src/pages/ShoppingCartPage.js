@@ -1,13 +1,15 @@
 import { useSelector } from "react-redux";
 
-import { cartedItemsSelector } from "redux/slices/shoppingCart";
+import {
+    cartedItemsSelector
+} from "redux/slices/shoppingCart";
 
 const ShoppingCartPage = ({}) => {
 
     const cartedItems = useSelector(cartedItemsSelector());
 
     return (
-	<div> {JSON.stringify(cartedItems)} </div>
+	<div> carted items: {JSON.stringify(cartedItems)} </div>
     );
 };
 

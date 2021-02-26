@@ -1,23 +1,35 @@
-import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import { getItem } from "redux/slices/shopee";
+import axios from "axios";
+
+import {
+    productDetailsDataSelector,
+    fetchProductDetailsData,
+    fetchProductDetailsDataStatusSelector,
+} from "redux/slices/shopee";
 
 const ProductDetailsPage = ({ productId }) => {
 
     const dispatch = useDispatch();
 
-    const [product, setProduct] = useState();
+    const product = useSelector(productDetailsDataSelector());
+    const fetchStatus = useSelector(fetchProductDetailsDataStatusSelector());
 
-    useEffect(async () => {
-	dispatch(getItem(productId))
-	    .then(res => setProduct(res))
+    useEffect(() => {
+	dispatch(fetchProductDetailsData(productId));
     }, []);
 
     return (
 	<>
-	    <div> Produto de id {productId}: </div>
-	    <div> {JSON.stringify(product)} </div>
+	    <div> fetchProductDetailsData status: {fetchStatus} </div>
+	    { fetchStatus == "pending"
+	      ? "~ here be skeletons ~"
+	      :<div>
+	     	   <div> {product.name} </div>
+	     	   <div> {product.description} </div>
+	       </div>
+	    }
 	</>
     );
 };
