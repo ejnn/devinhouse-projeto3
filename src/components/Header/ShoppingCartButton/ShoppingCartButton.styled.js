@@ -12,6 +12,7 @@ export const ShoppingCartWrapper = styled.div`
   position: relative;
   transition: 0.1s all ease-out;
   outline: none;
+  flex-shrink: 0;
   &:hover {
     box-shadow: 2px 2px 3px #00000077;
   }
