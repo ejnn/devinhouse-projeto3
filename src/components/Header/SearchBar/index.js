@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import SSearchButton from './SearchButton.styled';
 import SearchIcon from 'components/Header/SearchBar/SearchIcon';
+import { useHistory } from 'react-router-dom';
 
 const Input = styled.input`
   background-color: ${props => props.theme.colors.lightGray};
@@ -17,10 +18,10 @@ const Input = styled.input`
 `;
 
 export default function SearchButton() {
+  const history = useHistory();
   return (
     <SSearchButton>
-
-      <Input type='text' placeholder='Buscar...' />
+      <Input type='text' placeholder='Buscar...' onKeyPress={e => { if (e.key == 'Enter') { history.push(`/busca/${e.target.value}`) } } } />
       <SearchIcon />
     </SSearchButton>
   )
