@@ -1,10 +1,7 @@
 import styled from 'styled-components'
 
-const StyledHeader = styled.div`
+export const StyledHeader = styled.div`
   padding: 8px 64px 8px 64px;
-  @media (max-width: 600px) {
-  padding: 12px;
-  }
   min-height: 70px;
   width: 100vw;
   background-color: ${(props) => props.theme.colors.background};
@@ -15,7 +12,18 @@ const StyledHeader = styled.div`
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
   @media (max-width:600px){
     flex-wrap: wrap;
+    padding: 12px;
+  }
     
 `
-
-export default StyledHeader
+export const RightHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  @media (max-width: 600px) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+`;
