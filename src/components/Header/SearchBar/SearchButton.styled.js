@@ -4,7 +4,9 @@ export const SSearchButton = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: max(424px, 30%);
+flex-shrink: 0;
+width: 60%;
+margin: 4px 24px;
 height: 44px;
 padding: 10px 32px;
 border-radius: 54px;
@@ -21,4 +23,16 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 `;
 
-export default SSearchButton;
+export const Input = styled.input`
+  background-color: ${props => props.theme.colors.lightGray};
+  border: 0;
+  padding: 0;
+  width: 80%;
+  height: 40px;
+  outline: none;
+  ::placeholder {
+    color: ${props => props.theme.colors.darkGray};
+    font-family: 'roboto';
+    font-size: 18px;
+  }
+`;

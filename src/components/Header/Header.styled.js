@@ -2,7 +2,11 @@ import styled from 'styled-components'
 
 const StyledHeader = styled.div`
   padding: 8px 64px 8px 64px;
+  @media (max-width: 600px) {
+  padding: 12px;
+  }
   min-height: 70px;
+  width: 100vw;
   background-color: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.primary};
   display: flex;

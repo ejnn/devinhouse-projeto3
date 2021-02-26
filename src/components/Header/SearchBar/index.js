@@ -1,28 +1,23 @@
-import styled from 'styled-components';
-import SSearchButton from './SearchButton.styled';
+import { SSearchButton, Input } from './SearchButton.styled';
 import SearchIcon from 'components/Header/SearchBar/SearchIcon';
 import { useHistory } from 'react-router-dom';
-
-const Input = styled.input`
-  background-color: ${props => props.theme.colors.lightGray};
-  border: 0;
-  padding: 0;
-  width: 80%;
-  height: 40px;
-  outline: none;
-  ::placeholder {
-    color: ${props => props.theme.colors.darkGray};
-    font-family: 'roboto';
-    font-size: 18px;
-  }
-`;
+import { useRef } from 'react';
 
 export default function SearchButton() {
+  const textSearch = useRef(null);
   const history = useHistory();
+
+  const goToSearchPage = () => history.push(`/busca/${textSearch.current.value}`)
+  const searchOnEnter = event => {
+    if (event.key == 'Enter') {
+      goToSearchPage()
+    }
+  }
+
   return (
     <SSearchButton>
-      <Input type='text' placeholder='Buscar...' onKeyPress={e => { if (e.key == 'Enter') { history.push(`/busca/${e.target.value}`) } } } />
-      <SearchIcon />
+      <Input placeholder='Buscar...' ref={textSearch} onKeyPress={searchOnEnter} />
+      <SearchIcon onClick={goToSearchPage} />
     </SSearchButton>
   )
 }

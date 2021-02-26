@@ -1,22 +1,29 @@
 import StyledHeader from './Header.styled'
-import { ShopeeLogo } from './ShopeeLogo.styled'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import ShoppingCartButton from './ShoppingCartButton'
 import SearchBar from './SearchBar'
+import ShopeeLogo from './ShopeeLogo'
 
-const Home = styled(Link)`
-  text-decoration: none;
+const RightHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  @media (max-width: 600px) {
+  width: 100%;
+  justify-content: center;
+  }
+}
 `;
 
 export default function Header() {
   return (
     <StyledHeader>
-      <Home to='/'>
-        <ShopeeLogo>Shopee</ShopeeLogo>
-      </Home>
-      <SearchBar />
-      <ShoppingCartButton />
+      <ShopeeLogo />
+      <RightHeader>
+        <SearchBar />
+        <ShoppingCartButton />
+      </RightHeader>
     </StyledHeader>
   )
 }

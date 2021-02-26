@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 export const ShoppingCartWrapper = styled(Link)`
   background-color: #EBD7FF;
-  margin-left: 8px;
   border-radius: 50%;
   width: 52px;
   height: 52px;
