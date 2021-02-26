@@ -9,7 +9,7 @@ export const SShopeeLogo = styled.h1`
   margin: 0;
   padding: 0;
   cursor: pointer;
-  outline: unset;
+  outline: none;
   text-decoration: none;
   transition: 0.1s all ease-out;
   &:active {
@@ -28,4 +28,10 @@ export const HomeLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  outline: none;
+  border-radius: 54px;    
+  &:focus&:not(:active)&:not(:hover) {
+    box-shadow: 0px 0px 0px 1px ${props => props.theme.colors.primary};
+  }
 `;

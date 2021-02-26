@@ -3,7 +3,7 @@ import CartIcon from 'assets/shopping cart icon.svg'
 import { Link } from 'react-router-dom'
 
 export const ShoppingCartWrapper = styled(Link)`
-  background-color: #EBD7FF;
+  background-color: ${props => props.theme.colors.fainted};
   border-radius: 50%;
   width: 52px;
   height: 52px;
@@ -18,7 +18,7 @@ export const ShoppingCartWrapper = styled(Link)`
     box-shadow: 2px 2px 3px #00000077;
   }
   &:focus&:not(:active)&:not(:hover) {
-    box-shadow: 0px 0px 0px 1px #8000FF;
+    box-shadow: 0px 0px 0px 1px ${props => props.theme.colors.primary};
   }
   &:active {
     transform: translate(1px, 1px);
