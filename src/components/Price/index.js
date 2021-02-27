@@ -3,8 +3,8 @@ import {
     IntegerPartOfPrice 
 } from "./Price.styled";
 
-export default function Price ({price}) {
-    const localePrice = price.toLocaleString("pt-BR", {
+export default function Price ({ children }) {
+    const localePrice = children.toLocaleString("pt-BR", {
         maximumFractionDigits: 2,
         style: "currency",
         currency: "BRL",
