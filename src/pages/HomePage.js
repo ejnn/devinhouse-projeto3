@@ -1,35 +1,34 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import ProductsGrid from 'components/ProductsGrid'
+import { fetchProducts } from 'utils/api'
+// import {
+//   productsSelector,
+//   fetchProductsStatusSelector,
+//   fetchProducts,
+// } from "redux/slices/shopee";
 
-import {
-    productsSelector,
-    fetchProductsStatusSelector,
-    fetchProducts,
-} from "redux/slices/shopee";
+const HomePage = ({ }) => {
+  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState({});
+  // const fetchProductsStatus = useSelector(fetchProductsStatusSelector());
 
-const HomePage = ({}) => {
+  useEffect(() => {
+    fetchProducts().then((state) => {
+      console.log(state)
+      setProducts(state)
+      setLoading(!loading)
+    })
+  }, []);
 
-    const dispatch = useDispatch();
-
-    const products = useSelector(productsSelector());
-    const fetchProductsStatus = useSelector(fetchProductsStatusSelector());
-
-    useEffect(() => {
-	dispatch(fetchProducts());
-    }, []);
-    
-    return (
-	<>
-	    <div> fetch status: {fetchProductsStatus} </div>
-	    <div>
-		{
-		    fetchProductsStatus == "pending"
-			? "~ here be skeletons ~"
-			: products.map(itemData => <div key={itemData.id}> {itemData.name} </div>)
-		}
-	    </div>
-	</>
-    );
+  return (
+    <div>
+      {loading && <div>skeleton</div>}
+      <div>
+      {(loading === false) && <ProductsGrid itemData={products} />}
+      </div>
+    </div>
+  );
 };
 
 export default HomePage;
