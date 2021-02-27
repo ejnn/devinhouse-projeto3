@@ -14,7 +14,7 @@ export default function PriceAndInstallment({ price }) {
 
     return (
         <Wrapper>
-            <Price price={price}/>
+            <Price>{price}</Price>
             <Installment>ou 10x de {parcela}</Installment>
         </Wrapper>
     );
