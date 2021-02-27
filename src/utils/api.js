@@ -1,28 +1,21 @@
-import { createServer } from "miragejs";
+export const fetchProduct = async (targetProductId) =>
+  fetchProducts().then(products =>
+      products.filter(product => product.id == targetProductId)[0]);
 
-const makeServer = () => createServer({
-    routes() {
+export const fetchProducts = () =>
+  new Promise((resolve) => {
+    const fetch = () => resolve(PRODUCTS_MOCK);
+    setTimeout(fetch, 2500);
+  });
 
-	this.namespace = "api";
-	this.timing = 2500;
-
-	this.get("/fetchProducts", () => ({
-	    products: PRODUCTS_MOCK,
-	}));
-
-	this.get("/queryProducts/:query", (schema, request) => {
-	    const term = request.params.query;
-
-	    return {
-		products: PRODUCTS_MOCK.filter(({ name, description }) =>
-		    name.includes(term) || description.includes(term)),
-	    }
-	});
-
-    },
-});
-
-export default makeServer;
+export const queryProducts = (term) =>
+  new Promise((resolve) => {
+    const filtered = PRODUCTS_MOCK.filter(
+      ({ name, description }) => name.includes(term) || description.includes(term),
+    );
+    const fetch = () => resolve(filtered);
+    setTimeout(fetch, 2500);
+  });
 
 const PRODUCTS_MOCK = [
   {
