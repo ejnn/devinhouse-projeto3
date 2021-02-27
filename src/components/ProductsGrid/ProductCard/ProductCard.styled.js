@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 export const CardWrapper = styled.div`
   height: 448px;
@@ -13,9 +14,12 @@ export const CardWrapper = styled.div`
   align-items: center;
   box-sizing: border-box;
   margin: 0 16px 32px 16px;
+  &:hover {
+    box-shadow: 2px 2px 3px #00000077;
+  }
 `;
 
-export const Title = styled.h3`
+export const Title = styled(Link)`
   height: 48px;
   width: 215px;
   font-size: 18px;
@@ -26,14 +30,20 @@ export const Title = styled.h3`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: ${props => props.theme.colors.text};
+  text-decoration: none;
 `;
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.button`
   display: flex;
   width: 226px;
   height: 226px;
   justify-content: center;
   align-items: center;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
 `;
 
 export const ProductImage = styled.img`
