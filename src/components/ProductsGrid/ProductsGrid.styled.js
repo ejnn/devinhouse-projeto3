@@ -12,5 +12,6 @@ export const ProductsWrapper = styled.div`
   flex-grow: 0;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-content: flex-start;
 `;
