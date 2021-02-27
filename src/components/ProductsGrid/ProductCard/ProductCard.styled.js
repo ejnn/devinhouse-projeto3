@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-/* adicionar css de hover? */
 export const CardWrapper = styled.div`
   height: 448px;
   width: 258px;
