@@ -1,35 +1,32 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
-import {
-    productDetailsDataSelector,
-    fetchProductDetailsData,
-    fetchProductDetailsDataStatusSelector,
-} from "redux/slices/shopee";
+import DetailedProductCard from "components/DetailedProductCard";
+import { useEffect, useState } from "react";
+import { fetchProduct } from "utils/api";
 
 const ProductDetailsPage = ({ productId }) => {
+  const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState({});
 
-    const dispatch = useDispatch();
+  useEffect(() => {
+    fetchProduct(productId).then((state) => {
+      console.log(state);
+      setProduct(state);
+      setLoading(!loading);
+    });
+  }, []);
 
-    const product = useSelector(productDetailsDataSelector());
-    const fetchStatus = useSelector(fetchProductDetailsDataStatusSelector());
-
-    useEffect(() => {
-	dispatch(fetchProductDetailsData(productId));
-    }, []);
-
-    return (
-	<>
-	    <div> fetchProductDetailsData status: {fetchStatus} </div>
-	    { fetchStatus == "pending"
-	      ? "~ here be skeletons ~"
-	      :<div>
-	     	   <div> {product.name} </div>
-	     	   <div> {product.description} </div>
-	       </div>
-	    }
-	</>
-    );
+  return (
+    <div>
+      {
+	  loading 
+	  ? <div>skeleton</div>
+      :
+        <div>
+          <div>{product.name}</div>
+          <DetailedProductCard itemData={product} />
+        </div>
+      }
+    </div>
+  );
 };
 
 export default ProductDetailsPage;
