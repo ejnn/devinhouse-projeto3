@@ -5,7 +5,7 @@ import {
   ProductImage,
 } from "./ProductCard.styled";
 import ItemPurchaseButton from "components/ItemPurchaseButton";
-import PriceWrapper from "components/PriceWrapper";
+import PriceAndInstallment from "components/PriceAndInstallment";
 
 export default function ProductCard({ itemData }) {
   return (
@@ -14,7 +14,7 @@ export default function ProductCard({ itemData }) {
         <ProductImage src={itemData.image} alt="Product image" />
       </ImageWrapper>
       <Title>{itemData.name}</Title>
-      <PriceWrapper price={itemData.price} />
+      <PriceAndInstallment price={itemData.price}/>
       <ItemPurchaseButton itemData={itemData} />
     </CardWrapper>
   );

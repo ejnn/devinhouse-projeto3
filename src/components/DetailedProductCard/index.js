@@ -6,7 +6,7 @@ import {
   ProductImage,
 } from "./DetailedProductCard.styled";
 import ItemPurchaseButton from "components/ItemPurchaseButton";
-import PriceWrapper from "components/PriceWrapper";
+import PriceAndInstallment from "components/PriceAndInstallment";
 
 export default function DetailedProductCard({ itemData }) {
   return (
@@ -16,7 +16,7 @@ export default function DetailedProductCard({ itemData }) {
       </ImageWrapper>
       <SecondHalfWrapper>
         <ProductDescription>{itemData.description}</ProductDescription>
-        <PriceWrapper price={itemData.price} />
+        <PriceAndInstallment price={itemData.price}/>
         <ItemPurchaseButton itemData={itemData} />
       </SecondHalfWrapper>
     </DetailedCardContentWrapper>
