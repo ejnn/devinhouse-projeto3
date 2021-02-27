@@ -1,10 +1,10 @@
 import {
     Wrapper,
     Installment 
-} from "./PriceInstallmentWrapper.styled";
+} from "./PriceAndInstallment.styled";
 import Price from 'components/Price';
 
-export default function PriceInstallmentWrapper({ price }) {
+export default function PriceAndInstallment({ price }) {
 
     const parcela = (price / 10).toLocaleString("pt-BR", {
         maximumFractionDigits: 2,
