@@ -1,3 +1,4 @@
+import ProductsGrid from "components/ProductsGrid";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -25,7 +26,7 @@ const SearchResultsPage = ({ query }) => {
 		{
 		    queryStatus == "pending"
 			? "~ here be skeletons ~"
-			: products.map(itemData => <div key={itemData.id}> {itemData.name} </div>)
+			: <ProductsGrid itemData={products} />
 		}
 	    </div>
 	</>
