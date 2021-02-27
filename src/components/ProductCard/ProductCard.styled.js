@@ -15,9 +15,7 @@ export const CardWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  margin-right: 16px;
-  margin-left: 16px;
-  margin-bottom: 32px;
+  margin: 0 16px 32px 16px;
 `;
 
 export const Title = styled.span`

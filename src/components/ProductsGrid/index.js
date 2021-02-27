@@ -1,10 +1,10 @@
 import {SProductsGrid} from "./ProductsGrid.styled";
 import ProductCard from "components/ProductCard";
 
-export default function ProductsGrid({productsList}) {
+export default function ProductsGrid({ itemData }) {
     return (
         <SProductsGrid>
-            {productsList.map((itemData) => (
+            {itemData.map((itemData) => (
                 <ProductCard key={itemData.id} itemData={itemData}/>
             ))}
         </SProductsGrid>
