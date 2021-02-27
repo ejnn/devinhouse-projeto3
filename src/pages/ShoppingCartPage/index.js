@@ -1,19 +1,20 @@
-import ProductTableWrapper from "components/Cart/ProductTableWrapper";
-import { SContent } from "components/Cart/ShoppingCartPage.styled";
 import { useSelector } from "react-redux";
 
-import {
-    cartedItemsSelector
-} from "redux/slices/shoppingCart";
+import { cartedItemsSelector } from "redux/slices/shoppingCart";
 
-const ShoppingCartPage = ({ }) => {
+import ProductTable from "./ProductTable";
+import CheckoutControls from "./CheckoutControls";
+import Title from "components/Title";
 
+const ShoppingCartPage = ({}) => {
   const cartedItems = useSelector(cartedItemsSelector());
 
   return (
-    <SContent>
-      <ProductTableWrapper items={cartedItems} />
-    </SContent>
+    <>
+      <Title>Carrinho</Title>
+      <ProductTable products={cartedItems} />
+      <CheckoutControls />
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import DetailedProductCard from "components/DetailedProductCard";
 import { useEffect, useState } from "react";
 import { fetchProduct } from "utils/api";
-
+import Title from "components/Title";
 const ProductDetailsPage = ({ productId }) => {
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState({});
@@ -21,7 +21,7 @@ const ProductDetailsPage = ({ productId }) => {
 	  ? <div>skeleton</div>
       :
         <div>
-          <div>{product.name}</div>
+          <Title>{product.name}</Title>
           <DetailedProductCard itemData={product} />
         </div>
       }

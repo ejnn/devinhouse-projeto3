@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductsGrid from "components/ProductsGrid";
 import { fetchProducts } from "utils/api";
+import Title from "components/Title";
 
 const HomePage = ({}) => {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ const HomePage = ({}) => {
       ? <div>skeleton</div>
       : 
         <div>
-          <div>Bem vindo!</div>
+          <Title>Bem-vindo!</Title>
           <ProductsGrid itemData={products} />
         </div>
       }

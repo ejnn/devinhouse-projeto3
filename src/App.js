@@ -12,7 +12,7 @@ import Header from 'components/Header';
 import HomePage from "pages/HomePage";
 import SearchResultsPage from "pages/SearchResultsPage";
 import ProductDetailsPage from "pages/ProductDetailsPage";
-// import ShoppingCartPage from "pages/ShoppingCartPage";
+import ShoppingCartPage from "pages/ShoppingCartPage";
 
 function App() {
 
@@ -33,9 +33,9 @@ function App() {
 		    <Route path="/detalhes/:id" render={({match}) =>
 			       <ProductDetailsPage productId={match.params.id}/>}/>
 		    
-		    {/* <Route path="/carrinho">
+		    <Route path="/carrinho">
 			<ShoppingCartPage/>
-		    </Route> */}
+		    </Route> 
 		    
 		    <Route path="/">
 			<HomePage/>
