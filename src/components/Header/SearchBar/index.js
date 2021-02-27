@@ -19,7 +19,7 @@ export default function SearchButton() {
 
   return (
     <SSearchButton>
-      <Input placeholder='Buscar...' ref={textSearch} onKeyPress={searchOnEnter} />
+      <Input placeholder='Buscar...' aria-label="Text field for search" ref={textSearch} onKeyPress={searchOnEnter} />
       <SearchIcon onClick={goToSearchPage} />
     </SSearchButton>
   )
