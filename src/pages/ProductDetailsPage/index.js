@@ -1,11 +1,15 @@
-import DetailedProductCard from "components/DetailedProductCard";
 import { useEffect, useState } from "react";
+
 import { fetchProduct } from "utils/api";
+
+import DetailedProductCard from "./DetailedProductCard";
 import Title from "components/Title";
+import GoBackButton from "./GoBackButton";
+
 const ProductDetailsPage = ({ productId }) => {
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState({});
-
+  
   useEffect(() => {
     fetchProduct(productId).then((state) => {
       console.log(state);
@@ -23,6 +27,7 @@ const ProductDetailsPage = ({ productId }) => {
         <div>
           <Title>{product.name}</Title>
           <DetailedProductCard itemData={product} />
+          <GoBackButton/>
         </div>
       }
     </div>

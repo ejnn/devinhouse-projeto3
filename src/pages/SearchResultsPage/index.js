@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 
+import { queryProducts } from "utils/api";
+
 import ProductsGrid from "components/ProductsGrid";
 import Title from "components/Title";
 
-import { queryProducts } from "utils/api";
 
 const SearchResultsPage = ({ query }) => {
 
