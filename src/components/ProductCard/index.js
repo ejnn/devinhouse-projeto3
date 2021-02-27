@@ -9,16 +9,15 @@ import PriceAndInstallment from "components/PriceAndInstallment";
 import { useHistory } from "react-router-dom";
 
 export default function ProductCard({ itemData }) {
-
   const history = useHistory();
   const redirectToDetailedPage = () => history.push(`/detalhes/${itemData.id}`);
   
   return (
     <CardWrapper>
-      <ImageWrapper>
-        <ProductImage onClick={redirectToDetailedPage} src={itemData.image} alt="Product image" />
+      <ImageWrapper onClick={redirectToDetailedPage}>
+        <ProductImage src={itemData.image} alt="Product image" />
       </ImageWrapper>
-      <Title onClick={redirectToDetailedPage}>{itemData.name}</Title>
+      <Title to={`/detalhes/${itemData.id}`}>{itemData.name}</Title>
       <PriceAndInstallment price={itemData.price}/>
       <ItemPurchaseButton itemData={itemData} />
     </CardWrapper>
