@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import trashIconPath from "assets/trash icon.svg";
 
-import Button from "components/Button.styled.js";
+import Button from "components/Button";
 
 const SSingleButton = styled(Button)`
 `;

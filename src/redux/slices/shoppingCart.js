@@ -105,9 +105,15 @@ const distinctItemsCountSelector = () => (state) => state.shoppingCart.items.len
 
 const cartedItemsSelector = () => (state) => state.shoppingCart.items;
 
+const totalPriceSelector = () => (state) => {
+    return state.shoppingCart.items
+	.reduce((acc, cur) => acc + (cur.price * itemCountSelector(cur.id)(state)), 0);
+};
+
 export {
     itemCountSelector,
     distinctItemsCountSelector,
     cartedItemsSelector,
+    totalPriceSelector,
 };
 
