@@ -21,9 +21,17 @@ export const ProductDescription = styled.div`
   line-height: 24px;
 `;
 
-export const ProductImage = styled.img`
-  height: 226px;
+export const ImageWrapper = styled.div`
+  display: flex;
   width: 226px;
+  height: 226px;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ProductImage = styled.img`
+  max-height: 226px;
+  max-width: 226px;
   left: 172px;
   top: 200px;
   border-radius: 0px;

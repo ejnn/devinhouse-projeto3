@@ -31,17 +31,25 @@ export const Title = styled.span`
   letter-spacing: 0em;
   text-align: left;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  &:hover {
+  /* text-overflow: ellipsis; */ 
+/*    &:hover {
     overflow:visible;
-  }
+  }  */
+`;
+
+export const ImageWrapper = styled.div`
+  display: flex;
+  width: 226px;
+  height: 226px;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ProductImage = styled.img`
-  height: 226px;
-  width: 226px;
+  max-height: 226px;
+  max-width: 226px;
   left: 172px;
   top: 200px;
   border-radius: 0px;
+
 `;
