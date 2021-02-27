@@ -1,4 +1,5 @@
-import { SRow } from "../ProductTable.styled";
+import Row from "../Row";
+
 import {
     SHeaderText,
     SEmptyTag,
@@ -7,12 +8,12 @@ import {
 const TableHeader = ({}) => {
 
     return (
-	<SRow>
+	<Row>
 	    <SEmptyTag/>
 	    <SHeaderText> Preço UN. </SHeaderText>
 	    <SHeaderText> Quantidade </SHeaderText>
 	    <SHeaderText> Subtotal </SHeaderText>
-	</SRow>
+	</Row>
     );
 }
 
