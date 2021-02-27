@@ -10,9 +10,9 @@ import {
 
 import Header from 'components/Header';
 import HomePage from "pages/HomePage";
-import SearchResultsPage from "pages/SearchResultsPage";
-import ProductDetailsPage from "pages/ProductDetailsPage";
-import ShoppingCartPage from "pages/ShoppingCartPage";
+// import SearchResultsPage from "pages/SearchResultsPage";
+// import ProductDetailsPage from "pages/ProductDetailsPage";
+// import ShoppingCartPage from "pages/ShoppingCartPage";
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
 
 		<Switch>
 		    
-		    <Route path="/busca/:query" render={({match}) =>
+		    {/* <Route path="/busca/:query" render={({match}) =>
 			       <SearchResultsPage query={match.params.query}/>}/>
 		    
 		    <Route path="/detalhes/:id" render={({match}) =>
@@ -35,7 +35,7 @@ function App() {
 		    
 		    <Route path="/carrinho">
 			<ShoppingCartPage/>
-		    </Route>
+		    </Route> */}
 		    
 		    <Route path="/">
 			<HomePage/>
