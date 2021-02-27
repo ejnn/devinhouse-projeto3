@@ -1,34 +1,29 @@
-import ProductsGrid from "components/ProductsGrid";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
 
-import {
-    queryProducts,
-    queryProductsStatusSelector,
-    productsSelector,
-} from "redux/slices/shopee";
+import ProductsGrid from "components/ProductsGrid";
+import Title from "components/Title";
+
+import { queryProducts } from "utils/api";
 
 const SearchResultsPage = ({ query }) => {
 
-    const dispatch = useDispatch();
-
-    const products = useSelector(productsSelector());
-    const queryStatus = useSelector(queryProductsStatusSelector());
+    const [loading, setLoading] = useState(true);
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
-	dispatch(queryProducts(query));
+	setLoading(true);
+	queryProducts(query).then(res => setFilteredProducts(res));
+	setLoading(false);
     }, [query]);
     
     return (
 	<>
-	    <div> query for {query} status: {queryStatus} </div>
-	    <div>
-		{
-		    queryStatus == "pending"
-			? "~ here be skeletons ~"
-			: <ProductsGrid itemData={products} />
-		}
-	    </div>
+	    <Title> Resultados para "{query}" </Title>
+	    {
+		loading
+		    ? "~ here be skeletons ~"
+		    : <ProductsGrid itemData={filteredProducts} />
+	    }
 	</>
     );
 };

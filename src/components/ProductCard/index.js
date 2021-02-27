@@ -11,6 +11,7 @@ import { useHistory } from "react-router-dom";
 export default function ProductCard({ itemData }) {
   const history = useHistory();
   const redirectToDetailedPage = () => history.push(`/detalhes/${itemData.id}`);
+  
   return (
     <CardWrapper>
       <ImageWrapper onClick={redirectToDetailedPage}>
