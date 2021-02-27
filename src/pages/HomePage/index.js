@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import ProductsGrid from "components/ProductsGrid";
+
 import { fetchProducts } from "utils/api";
+
+import ProductsGrid from "components/ProductsGrid";
 import Title from "components/Title";
 
 const HomePage = ({}) => {
