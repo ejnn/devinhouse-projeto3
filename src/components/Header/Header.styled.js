@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const StyledHeader = styled.div`
   padding: 8px 64px 8px 64px;
   min-height: 70px;
-  width: 100vw;
+  width: 100%;
   background-color: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.primary};
   display: flex;
