@@ -4,10 +4,8 @@ import styled from "styled-components";
 export const CardWrapper = styled.div`
   height: 448px;
   width: 258px;
-  left: 156px;
-  top: 190px;
   border-radius: 7px;
-  background: #ffffff;
+  background: ${props => props.theme.colors.background};
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
   display: flex;
   flex-direction: column;
@@ -18,21 +16,17 @@ export const CardWrapper = styled.div`
   margin: 0 16px 32px 16px;
 `;
 
-export const Title = styled.span`
+export const Title = styled.h3`
   height: 48px;
   width: 215px;
-  left: 172px;
-  top: 442px;
   font-size: 18px;
   font-weight: bolder;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
   overflow: hidden;
-  /* text-overflow: ellipsis; */ 
-/*    &:hover {
-    overflow:visible;
-  }  */
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 export const ImageWrapper = styled.div`
@@ -48,6 +42,4 @@ export const ProductImage = styled.img`
   max-width: 226px;
   left: 172px;
   top: 200px;
-  border-radius: 0px;
-
 `;
