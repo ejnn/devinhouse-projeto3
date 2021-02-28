@@ -10,7 +10,6 @@ import EmptyCartWrapper from "./EmptyCartMessage";
 
 const ShoppingCartPage = ({}) => {
   const cartedItems = useSelector(cartedItemsSelector());
-  console.log("itens no carrinho:", cartedItems)
   return (
     <PageContents>
       <Title>Carrinho</Title>
