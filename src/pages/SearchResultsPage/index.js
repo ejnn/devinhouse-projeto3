@@ -5,8 +5,7 @@ import { queryProducts } from "utils/api";
 import SearchPageResult from "./SearchPageResult";
 import Title from "components/Title";
 import PageContents from "components/PageContents";
-import ProductsGridSkeleton from 'components/ProductsGridSkeleton'
-
+import ProductsGridSkeleton from "components/ProductsGridSkeleton";
 
 const SearchResultsPage = ({ query }) => {
   const [loading, setLoading] = useState(true);
