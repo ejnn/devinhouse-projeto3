@@ -23,13 +23,17 @@ export const Title = styled(Link)`
   height: 48px;
   width: 215px;
   font-size: 18px;
+  > * {
+    font-size: 18px;
+  }
   font-weight: bolder;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   color: ${props => props.theme.colors.text};
   text-decoration: none;
 `;
@@ -44,6 +48,7 @@ export const ImageWrapper = styled.button`
   background-repeat:no-repeat;
   border: none;
   cursor:pointer;
+  border-radius: 5px;
 `;
 
 export const ProductImage = styled.img`
