@@ -1,24 +1,17 @@
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme, themeSelector } from "redux/slices/theme";
 
-import { SThemeSwither } from './ThemeSwitcher.styled';
+import { SThemeSwitcher } from './ThemeSwitcher.styled';
 
-export default function ThemeSwither() {
+export default function ThemeSwitcher() {
 
-  const theme = useSelector(themeSelector());
   const dispatch = useDispatch();
 
-  
+  const theme = useSelector(themeSelector());
 
   return (
-    <SThemeSwither onClick={() => {
-      console.log(theme);
-      dispatch(toggleTheme())
-    }}>
-      { (theme.theme == "lightTheme")
-      ?'🌛'
-      :'🌞'
-      }
-    </SThemeSwither>
-  )
+      <SThemeSwitcher onClick={() => dispatch(toggleTheme())}>
+	  { (theme.theme == "lightTheme") ?'🌛' :'🌞' }
+      </SThemeSwitcher>
+  );
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SThemeSwither = styled.button`
+export const SThemeSwitcher = styled.button`
   border-radius: 50%;
   width: 52px;
   height: 52px;
