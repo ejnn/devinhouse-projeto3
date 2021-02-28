@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
 export const SProductsGrid = styled.div`
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100%;
+    display: block;
+    width: 100%
 `;
 
 export const ProductsWrapper = styled.div`
   max-width: 1200px;
-  flex-wrap: wrap;
-  flex-grow: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+`;
+
+export const CentralizerWrapper = styled.div`
   display: flex;
+  justify-content:center;
   align-items: center;
-  justify-content: flex-start;
-  align-content: flex-start;
+  width: 100%;
+  height: 100%;
 `;

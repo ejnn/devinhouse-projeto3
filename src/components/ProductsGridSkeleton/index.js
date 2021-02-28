@@ -3,7 +3,7 @@ import Skeleton from "react-loading-skeleton";
 import {
   CardWrapper,
 } from "components/ProductsGrid/ProductCard/ProductCard.styled";
-import { SProductsGrid, ProductsWrapper } from "components/ProductsGrid/ProductsGrid.styled";
+import { SProductsGrid, ProductsWrapper, CentralizerWrapper } from "components/ProductsGrid/ProductsGrid.styled";
 import { PriceWrapper } from './ProductsGridSkeleton.styled.js'
 
 export default function ProductsGridSkeleton() {
