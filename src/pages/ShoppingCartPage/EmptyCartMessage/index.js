@@ -1,15 +1,16 @@
-import { SEmptyCartWrapper, EmptyCartMessage, EmptyCartImage } from "./EmptyCartMessage.styled";
 import EmptyCartIconSVG from "assets/shopping bag warning icon.svg";
+import { 
+    SEmptyCartWrapper, 
+    EmptyCartMessage 
+} from "./EmptyCartMessage.styled";
 
 export default function EmptyCartWrapper() {
     return (
         <SEmptyCartWrapper>
-        
-            <EmptyCartImage src={EmptyCartIconSVG} alt="Warnin, empty cart"/>
+            <img src={EmptyCartIconSVG} alt="Aviso Carrinho Vazio"/>
             <EmptyCartMessage>
                 Seu carrinho está vazio.
             </EmptyCartMessage>
-        
         </SEmptyCartWrapper>
     );
 };

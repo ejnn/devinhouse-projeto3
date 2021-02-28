@@ -18,7 +18,7 @@ export default function ShoppingCartButton(props) {
 
   return (
     <ShoppingCartWrapper tabIndex='0' to='/carrinho' onKeyPress={onEnter} >
-      <img src={CartIcon} alt="Shopping Cart Icon" />
+      <img src={CartIcon} alt="Icone do Carrinho de Compras" />
       {(items > 0) &&
         <Notifications>{items}</Notifications>}
     </ShoppingCartWrapper>
