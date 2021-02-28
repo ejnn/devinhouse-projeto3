@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const SProductsGrid = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
 `;
 
 export const ProductsWrapper = styled.div`
@@ -12,5 +13,6 @@ export const ProductsWrapper = styled.div`
   flex-grow: 0;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-content: flex-start;
 `;

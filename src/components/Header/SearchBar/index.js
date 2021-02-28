@@ -1,9 +1,11 @@
-import { SSearchButton, Input } from './SearchButton.styled';
-import SearchIcon from 'components/Header/SearchBar/SearchIcon';
-import { useHistory } from 'react-router-dom';
 import { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 
-export default function SearchButton() {
+import SearchIcon from 'components/Header/SearchBar/SearchIcon';
+
+import { SSearchButton, Input } from './SearchBar.styled';
+
+export default function SearchBar() {
   const textSearch = useRef(null);
   const history = useHistory();
 
@@ -19,7 +21,7 @@ export default function SearchButton() {
 
   return (
     <SSearchButton>
-      <Input placeholder='Buscar...' ref={textSearch} onKeyPress={searchOnEnter} />
+      <Input placeholder='Buscar...' aria-label="Text field for search" ref={textSearch} onKeyPress={searchOnEnter} />
       <SearchIcon onClick={goToSearchPage} />
     </SSearchButton>
   )

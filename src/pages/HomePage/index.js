@@ -4,6 +4,8 @@ import { fetchProducts } from "utils/api";
 
 import ProductsGrid from "components/ProductsGrid";
 import Title from "components/Title";
+import PageContents from 'components/PageContents';
+import ProductsGridSkeleton from 'components/ProductsGridSkeleton'
 
 const HomePage = ({}) => {
   const [loading, setLoading] = useState(true);
@@ -11,24 +13,19 @@ const HomePage = ({}) => {
 
   useEffect(() => {
     fetchProducts().then((state) => {
-      console.log(state);
       setProducts(state);
       setLoading(!loading);
     });
   }, []);
 
   return (
-    <div>
-      {
-      loading 
-      ? <div>skeleton</div>
-      : 
-        <div>
+    <PageContents>
           <Title>Bem-vindo!</Title>
-          <ProductsGrid itemData={products} />
-        </div>
+      {loading 
+      ? <ProductsGridSkeleton />
+      : <ProductsGrid itemData={products} />
       }
-    </div>
+    </PageContents>
   );
 };
 

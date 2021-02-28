@@ -1,5 +1,6 @@
-import { SProductsGrid, ProductsWrapper } from "./ProductsGrid.styled";
 import ProductCard from "components/ProductsGrid/ProductCard";
+
+import { SProductsGrid, ProductsWrapper } from "./ProductsGrid.styled";
 
 export default function ProductsGrid({ itemData }) {
     return (

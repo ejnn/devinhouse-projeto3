@@ -1,7 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const StyledHeader = styled.div`
   padding: 8px 64px 8px 64px;
+  margin-bottom: 24px;
   min-height: 70px;
   width: 100%;
   background-color: ${(props) => props.theme.colors.background};

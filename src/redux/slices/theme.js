@@ -6,7 +6,8 @@ const lightTheme = {
     gray: "#E5E5E5",
     lightGray: "#F4F4F4",
     text: "#000",
-    background: "#FFF"
+    background: "#FFF",
+    secondLayer: "#FFF"
   }
 }
 

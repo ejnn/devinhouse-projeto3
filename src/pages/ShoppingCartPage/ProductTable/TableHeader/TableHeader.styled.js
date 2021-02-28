@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 const SHeaderText = styled.span``;
 
-const SEmptyTag = styled.div``;
+const STableHeader = styled.div`
+  padding: 0 32px;
+`;
 
 export {
-    SHeaderText,
-    SEmptyTag,
+  SHeaderText,
+  STableHeader
 };

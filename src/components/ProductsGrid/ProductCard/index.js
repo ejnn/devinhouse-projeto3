@@ -1,12 +1,14 @@
+import { useHistory } from "react-router-dom";
+
+import ItemPurchaseButton from "components/ItemPurchaseButton";
+import PriceAndInstallment from "components/PriceAndInstallment";
+
 import {
   CardWrapper,
   Title,
   ImageWrapper,
   ProductImage,
 } from "./ProductCard.styled";
-import ItemPurchaseButton from "components/ItemPurchaseButton";
-import PriceAndInstallment from "components/PriceAndInstallment";
-import { useHistory } from "react-router-dom";
 
 export default function ProductCard({ itemData }) {
   const history = useHistory();
@@ -17,7 +19,7 @@ export default function ProductCard({ itemData }) {
       <ImageWrapper onClick={redirectToDetailedPage}>
         <ProductImage src={itemData.image} alt="Product image" />
       </ImageWrapper>
-      <Title to={`/detalhes/${itemData.id}`}>{itemData.name}</Title>
+      <Title to={`/detalhes/${itemData.id}`}><h3>{itemData.name}</h3></Title>
       <PriceAndInstallment price={itemData.price}/>
       <ItemPurchaseButton itemData={itemData} />
     </CardWrapper>

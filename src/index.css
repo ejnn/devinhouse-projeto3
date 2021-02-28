@@ -8,6 +8,20 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  outline: none;
+}
+
+*:focus:not(:active):not(:hover):not(input) {
+    box-shadow: 0px 0px 0px 1px red; /* trocar para theme.colors.primary}; */
+  }
+
+body {
+  background: #E5E5E5;
+  min-height: 100vh;
+}
+
+html {
+  font-size: 12px;
 }
 
 code {

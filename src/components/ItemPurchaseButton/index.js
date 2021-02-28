@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
+
 import { itemCountSelector, addItem, removeItem } from "redux/slices/shoppingCart";
+import Button from "components/Button";
 
 import {
-  SSingleButton,
   SAmountControlsWrapper,
-  SChangeAmountButton,
   STrashIcon,
 } from "./ItemPurchaseButton.styled";
 
@@ -28,26 +28,26 @@ export default function ItemPurchaseButton({ itemData }) {
 
 const AddToCartButton = ({ handleClick }) => {
   return (
-    <SSingleButton onClick={handleClick}>
+    <Button onClick={handleClick}>
       Comprar
-    </SSingleButton>
+    </Button>
   );
 };
 
 const ItemAmountControls = ({ handleDecrease, itemAmount, handleIncrease }) => {
   return (
     <SAmountControlsWrapper>
-      <SChangeAmountButton onClick={handleDecrease}>
+      <Button width='44px' onClick={handleDecrease}>
         {
           (itemAmount == 1)
             ? <STrashIcon />
             : "-"
         }
-      </SChangeAmountButton>
+      </Button>
 
       <div> {itemAmount} </div>
 
-      <SChangeAmountButton onClick={handleIncrease}> + </SChangeAmountButton>
+      <Button width='44px' onClick={handleIncrease}> + </Button>
     </SAmountControlsWrapper>
   );
 };

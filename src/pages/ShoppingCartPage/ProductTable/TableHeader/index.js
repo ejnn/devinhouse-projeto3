@@ -1,20 +1,22 @@
 import Row from "../Row";
 
 import {
-    SHeaderText,
-    SEmptyTag,
+  SHeaderText,
+  STableHeader
 } from "./TableHeader.styled";
 
-const TableHeader = ({}) => {
+const TableHeader = ({ }) => {
 
-    return (
-	<Row>
-	    <SEmptyTag/>
-	    <SHeaderText> Preço UN. </SHeaderText>
-	    <SHeaderText> Quantidade </SHeaderText>
-	    <SHeaderText> Subtotal </SHeaderText>
-	</Row>
-    );
+  return (
+    <STableHeader>
+      <Row>
+        <div />
+        <SHeaderText> Preço UN. </SHeaderText>
+        <SHeaderText> Quantidade </SHeaderText>
+        <SHeaderText> Subtotal </SHeaderText>
+      </Row>
+    </STableHeader>
+  );
 }
 
 export default TableHeader;

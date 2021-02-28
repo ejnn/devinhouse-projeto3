@@ -3,7 +3,7 @@ import {
     IntegerPartOfPrice 
 } from "./Price.styled";
 
-export default function Price ({ children }) {
+export default function Price ({ children, fontSize }) {
     const localePrice = children.toLocaleString("pt-BR", {
         maximumFractionDigits: 2,
         style: "currency",
@@ -16,12 +16,11 @@ export default function Price ({ children }) {
     const regexPriceValue = new RegExp(".+(?=,)", "g");
     const integerPart = regexPriceValue.exec(noSymbolPrice)[0];
     const decimalPart = noSymbolPrice.replace(regexPriceValue, "");
-
     return (
     <div>
-        <PriceComplement>{currencySymbol}</PriceComplement>
-        <IntegerPartOfPrice>{integerPart}</IntegerPartOfPrice>
-        <PriceComplement>{decimalPart}</PriceComplement>
+        <PriceComplement fontSize={fontSize} >{currencySymbol}</PriceComplement>
+        <IntegerPartOfPrice fontSize={fontSize} >{integerPart}</IntegerPartOfPrice>
+        <PriceComplement fontSize={fontSize} >{decimalPart}</PriceComplement>
     </div>
     );
 }
