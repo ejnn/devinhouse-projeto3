@@ -1,9 +1,9 @@
-import { SSearchButton, Input } from './SearchButton.styled';
+import { SSearchButton, Input } from './SearchBar.styled';
 import SearchIcon from 'components/Header/SearchBar/SearchIcon';
 import { useHistory } from 'react-router-dom';
 import { useRef } from 'react';
 
-export default function SearchButton() {
+export default function SearchBar() {
   const textSearch = useRef(null);
   const history = useHistory();
 
