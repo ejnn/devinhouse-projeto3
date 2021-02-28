@@ -17,7 +17,7 @@ const lightTheme = {
 const darkTheme = {
   colors: {
     primary: "#BFDBFE",
-    primaryGradient: "linear-gradient(150deg, #2980B9 30%, #BFDBFE 100%)",
+    primaryGradient: "linear-gradient(150deg, #2980B9 0%, #BFDBFE 100%)",
     fainted: "#0000",
     background: "#111827",
     secondLayer: "#1F2937",
@@ -31,7 +31,8 @@ const darkTheme = {
 }
 
 const themes = {
-  "light": darkTheme,
+  "light": lightTheme,
+  "dark": darkTheme,
 };
 
 export default themes;

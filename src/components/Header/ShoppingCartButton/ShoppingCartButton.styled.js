@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { ReactComponent as CartIcon }from "assets/shopping cart icon.svg";
+import { ReactComponent as CartIcon } from "assets/shopping cart icon.svg";
 
 export const ShoppingCartWrapper = styled(Link)`
   background: ${props => props.theme.colors.fainted};
@@ -39,7 +39,10 @@ export const Notifications = styled.div`
   align-items: center;
 `;
 
-export const SCartIcon = styled(CartIcon)
+export const SCartIcon = styled(CartIcon)`
+${props => props.theme.theme == "darkTheme" && css`
   * {
-  fill: url(.MyGradient)
-  };
+  fill: url(#MyGradient)
+  } 
+`}
+`;

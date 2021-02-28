@@ -1,10 +1,9 @@
-import SearchIconSVG from "assets/search icon.svg";
-import SSearchIcon from "./SearchIcon.styled";
+import { SSearchIcon, SearchIconSVG } from "./SearchIcon.styled";
 
 export default function SearchIcon({ onClick }) {
   return (
     <SSearchIcon onClick={onClick}>
-    <img src={SearchIconSVG} alt="Icone de Busca"/>
+    <SearchIconSVG />
     </SSearchIcon>
   )
 }
