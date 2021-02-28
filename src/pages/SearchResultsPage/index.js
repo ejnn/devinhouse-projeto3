@@ -2,33 +2,34 @@ import { useState, useEffect } from "react";
 
 import { queryProducts } from "utils/api";
 
-import PageResult from "./PageResult";
+import SearchPageResult from "./SearchPageResult";
 import Title from "components/Title";
 import PageContents from "components/PageContents";
 
 const SearchResultsPage = ({ query }) => {
-  const [loading, setLoading] = useState(true)
-  const [filteredProducts, setFilteredProducts] = useState([])
+  const [loading, setLoading] = useState(true);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    setLoading(true)
-    queryProducts(query).then(res => setFilteredProducts(res))
-    setLoading(false)
-    
-  }, [query])
+    setLoading(true);
+    queryProducts(query)
+      .then(res => setFilteredProducts(res))
+      .then(() => setLoading(false));
+    console.log("use effect foi chamado");
+  }, [query]);
 
   console.log("filteredproducts", filteredProducts);
   console.log(loading);
   return (
     <PageContents>
       <Title> Resultados para "{query}" </Title>
-      {loading ?
-        '~ here be skeletons ~'
-         :
-        <PageResult filteredProducts={filteredProducts}/>
-      }
+      {loading ? (
+        "~ here be skeletons ~"
+      ) : (
+        <SearchPageResult filteredProducts={filteredProducts} />
+      )}
     </PageContents>
-  )
-}
+  );
+};
 
-export default SearchResultsPage
+export default SearchResultsPage;
