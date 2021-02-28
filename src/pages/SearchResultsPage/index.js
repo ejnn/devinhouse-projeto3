@@ -15,11 +15,8 @@ const SearchResultsPage = ({ query }) => {
     queryProducts(query)
       .then(res => setFilteredProducts(res))
       .then(() => setLoading(false));
-    console.log("use effect foi chamado");
   }, [query]);
 
-  console.log("filteredproducts", filteredProducts);
-  console.log(loading);
   return (
     <PageContents>
       <Title> Resultados para "{query}" </Title>
