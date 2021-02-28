@@ -17,19 +17,15 @@ export const ShoppingCartWrapper = styled(Link)`
     box-shadow: 2px 2px 3px #00000077;
   }
   outline: none;
-  &:focus&:not(:active)&:not(:hover) {
-    box-shadow: 0px 0px 0px 1px ${props => props.theme.colors.primary};
-  }
   &:active {
     transform: translate(1px, 1px);
     box-shadow: 1px 0px 2px #00000050;
   }
-  
 `;
 
 export const Notifications = styled.div`
   border-radius: 50%;
-  background-color: #EF4444;
+  background: #EF4444;
   color: white;
   font-size: 1rem;
   width: 20px; /* trocar tudo pra rem no final */
