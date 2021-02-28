@@ -15,7 +15,10 @@ export default function ThemeSwither() {
       console.log(theme);
       dispatch(toggleTheme())
     }}>
-      🌞
+      { (theme.theme == "lightTheme")
+      ?'🌛'
+      :'🌞'
+      }
     </SThemeSwither>
   )
 }
