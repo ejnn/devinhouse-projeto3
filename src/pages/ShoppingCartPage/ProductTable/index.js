@@ -5,7 +5,7 @@ import TableBody from "./TableBody";
 import ProductRow from "./ProductRow";
 import RowSeparator from "./RowSeparator";
 
-import { SProductTable } from './ProductTable.styled'
+import { SProductTable } from "./ProductTable.styled";
 
 const ProductTable = ({ products }) => {
 
