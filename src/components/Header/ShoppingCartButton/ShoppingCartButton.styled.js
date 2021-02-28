@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import CartIcon from 'assets/shopping cart icon.svg'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+
+import styled from "styled-components";
 
 export const ShoppingCartWrapper = styled(Link)`
   background: ${props => props.theme.colors.fainted};

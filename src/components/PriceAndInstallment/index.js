@@ -1,8 +1,9 @@
+import Price from 'components/Price';
+
 import {
     Wrapper,
     Installment 
 } from "./PriceAndInstallment.styled";
-import Price from 'components/Price';
 
 export default function PriceAndInstallment({ price }) {
 

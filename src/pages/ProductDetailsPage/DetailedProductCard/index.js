@@ -1,3 +1,6 @@
+import ItemPurchaseButton from 'components/ItemPurchaseButton'
+import PriceAndInstallment from 'components/PriceAndInstallment'
+
 import {
   DetailedCardContentWrapper,
   SecondHalfWrapper,
@@ -5,8 +8,6 @@ import {
   ImageWrapper,
   ProductImage
 } from './DetailedProductCard.styled'
-import ItemPurchaseButton from 'components/ItemPurchaseButton'
-import PriceAndInstallment from 'components/PriceAndInstallment'
 
 export default function DetailedProductCard ({ itemData }) {
   return (

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const StyledHeader = styled.div`
   padding: 8px 64px 8px 64px;

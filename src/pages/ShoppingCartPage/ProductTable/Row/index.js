@@ -1,5 +1,3 @@
-import { Children } from "react";
-
 import {
   SRow,
   SCentralizedColumn,

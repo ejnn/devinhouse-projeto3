@@ -1,8 +1,10 @@
-import { ShoppingCartWrapper, Notifications } from './ShoppingCartButton.styled'
-import CartIcon from 'assets/shopping cart icon.svg'
 import { useSelector } from "react-redux";
-import { distinctItemsCountSelector } from 'redux/slices/shoppingCart';
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+
+import { distinctItemsCountSelector } from "redux/slices/shoppingCart";
+import CartIcon from "assets/shopping cart icon.svg";
+
+import { ShoppingCartWrapper, Notifications } from "./ShoppingCartButton.styled";
 
 export default function ShoppingCartButton(props) {
   const items = useSelector(distinctItemsCountSelector());
