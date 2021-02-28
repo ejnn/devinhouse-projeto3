@@ -9,6 +9,7 @@ export const PageContents = styled.div`
   > * {
    max-width: 1200px;
   }
+  min-height: 70vh;
 `;
 
 export default PageContents;
