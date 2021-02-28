@@ -1,33 +1,45 @@
-const lightTheme = {
-  colors: {
-    primary: "#8000FF",
-    fainted: "#EBD7FF",
-    darkGray: "#9E9E9E",
-    gray: "#E5E5E5",
-    lightGray: "#F4F4F4",
-    text: "#000",
-    background: "#FFF",
-    secondLayer: "#FFF"
-  }
-}
+import themes from "utils/themes";
 
+const themeKeys = Object.keys(themes);
 const initialState = {
-  theme: "light",
-  currentTheme: lightTheme,
+    theme: themes[themeKeys[0]],
+    themeId: themeKeys[0],
 };
 
 const themeReducer = (state = initialState, action) => {
 
   switch (action.type) {
 
-    default:
+  case "theme/toggleTheme":
+
+      let nextThemeIndex = themeKeys.indexOf(state.themeId) + 1;
+
+      let newThemeId;
+
+      if (nextThemeIndex == themeKeys.length) {
+	  newThemeId = themeKeys[0];
+      } else {
+	  newThemeId = themeKeys[nextThemeIndex];
+      }
+
+      return {
+	  ...state,
+	  theme: themes[newThemeId],
+	  themeId: newThemeId,
+      };
+
+  default:
       return state;
 
   }
 };
 
-const themeSelector = () => (state) => state.theme.currentTheme;
+export const toggleTheme = () => ({
+  type: "theme/toggleTheme"
+});
 
-export { themeSelector };
+export const themeSelector = () => (state) => state.theme.theme;
+
+export const themeIdSelector = () => (state) => state.theme.themeId;
 
 export default themeReducer;
