@@ -4,7 +4,7 @@ import SSearchIcon from "./SearchIcon.styled";
 export default function SearchIcon({ onClick }) {
   return (
     <SSearchIcon onClick={onClick}>
-    <img src={SearchIconSVG} alt="Search Icon"/>
+    <img src={SearchIconSVG} alt="Icone de Busca"/>
     </SSearchIcon>
   )
 }

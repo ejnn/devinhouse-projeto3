@@ -13,7 +13,7 @@ export default function DetailedProductCard ({ itemData }) {
   return (
     <DetailedCardContentWrapper>
       <ImageWrapper>
-        <ProductImage src={itemData.image} alt='Product image' />
+        <ProductImage src={itemData.image} alt="Imagem do Produto" />
       </ImageWrapper>
       <SecondHalfWrapper>
         <ProductDescription>{itemData.description}</ProductDescription>

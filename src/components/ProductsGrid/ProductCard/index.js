@@ -17,7 +17,7 @@ export default function ProductCard({ itemData }) {
   return (
     <CardWrapper>
       <ImageWrapper onClick={redirectToDetailedPage}>
-        <ProductImage src={itemData.image} alt="Product image" />
+        <ProductImage src={itemData.image} alt="Imagem do Produto" />
       </ImageWrapper>
       <Title to={`/detalhes/${itemData.id}`}><h3>{itemData.name}</h3></Title>
       <PriceAndInstallment price={itemData.price}/>

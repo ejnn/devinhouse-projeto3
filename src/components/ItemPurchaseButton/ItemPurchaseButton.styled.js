@@ -11,7 +11,7 @@ const SAmountControlsWrapper = styled.div`
     max-width: 226px;
 `;
 
-const STrashIcon = ({ }) => <img src={trashIconPath} alt="Trash icon" />;
+const STrashIcon = ({ }) => <img src={trashIconPath} alt="Icone da Lixeira" />;
 
 export {
   SAmountControlsWrapper,
