@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom'
 
 import Button from 'components/Button'
+
 import { GoBackWrapper } from './GoBackButton.styled'
 
 const GoBackButton = () => {

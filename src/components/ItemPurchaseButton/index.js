@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
+
 import { itemCountSelector, addItem, removeItem } from "redux/slices/shoppingCart";
+import Button from "components/Button";
 
 import {
-  SSingleButton,
   SAmountControlsWrapper,
   STrashIcon,
 } from "./ItemPurchaseButton.styled";
-import Button from "components/Button";
 
 export default function ItemPurchaseButton({ itemData }) {
 

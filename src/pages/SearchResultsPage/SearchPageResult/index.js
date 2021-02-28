@@ -1,5 +1,6 @@
-import {EmptyResultMessage} from "./SearchPageResult.styled";
 import ProductsGrid from "components/ProductsGrid";
+
+import {EmptyResultMessage} from "./SearchPageResult.styled";
 
 export default function SearchPageResult({ filteredProducts }) {
   if (filteredProducts.length != 0) {

@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
 
 export const SShopeeLogo = styled.h1`
   color: ${props => props.theme.colors.primary};
@@ -12,9 +13,6 @@ export const SShopeeLogo = styled.h1`
   outline: none;
   text-decoration: none;
   transition: 0.1s all ease-out;
-  &:active {
-    transform: scale(0.9)
-  }
   @media (max-width: 600px) {
   margin: 8px;
   }

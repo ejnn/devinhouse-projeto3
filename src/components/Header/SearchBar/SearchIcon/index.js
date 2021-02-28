@@ -1,5 +1,5 @@
-import SearchIconSVG from 'assets/search icon.svg';
-import SSearchIcon from './SearchIcon.styled'
+import SearchIconSVG from "assets/search icon.svg";
+import SSearchIcon from "./SearchIcon.styled";
 
 export default function SearchIcon({ onClick }) {
   return (

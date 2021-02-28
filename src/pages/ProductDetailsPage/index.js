@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
-import { fetchProduct } from 'utils/api'
+import { fetchProduct } from "utils/api";
 
-import DetailedProductCard from './DetailedProductCard'
-import Title from 'components/Title'
-import GoBackButton from './GoBackButton'
-import PageContents from 'components/PageContents'
+import DetailedProductCard from "./DetailedProductCard";
+import Title from "components/Title";
+import GoBackButton from "./GoBackButton";
+import PageContents from "components/PageContents";
 
 const ProductDetailsPage = ({ productId }) => {
   const [loading, setLoading] = useState(true)

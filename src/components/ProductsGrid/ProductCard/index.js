@@ -1,12 +1,14 @@
+import { useHistory } from "react-router-dom";
+
+import ItemPurchaseButton from "components/ItemPurchaseButton";
+import PriceAndInstallment from "components/PriceAndInstallment";
+
 import {
   CardWrapper,
   Title,
   ImageWrapper,
   ProductImage,
 } from "./ProductCard.styled";
-import ItemPurchaseButton from "components/ItemPurchaseButton";
-import PriceAndInstallment from "components/PriceAndInstallment";
-import { useHistory } from "react-router-dom";
 
 export default function ProductCard({ itemData }) {
   const history = useHistory();

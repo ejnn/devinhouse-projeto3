@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { itemCountSelector } from "redux/slices/shoppingCart";
 
+import { itemCountSelector } from "redux/slices/shoppingCart";
 import Row from "../Row";
 import Price from "components/Price";
 import ItemPurchaseButton from "components/ItemPurchaseButton";

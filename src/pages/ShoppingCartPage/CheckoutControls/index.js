@@ -1,13 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   totalPriceSelector,
   resetCart,
 } from "redux/slices/shoppingCart.js";
+import Price from "components/Price";
+import Button from "components/Button";
 
 import { SCheckoutControlsWrapper } from "./CheckoutControls.styled";
 
-import Price from "components/Price";
-import Button from "components/Button";
 
 const CheckoutControls = ({ }) => {
 
