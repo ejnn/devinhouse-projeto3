@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const SRow = styled.div`
 display: grid;
-grid-template-columns: 2.5fr 1fr 1fr 1fr;
+grid-template-columns: 4fr 1fr 2fr 1fr;
 margin: 12px 0;
 `;
 

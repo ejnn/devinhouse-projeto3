@@ -15,7 +15,7 @@ const CheckoutControls = ({ }) => {
 
   const totalPrice = useSelector(totalPriceSelector());
   const completePurchase = () => {
-    window.alert("A compra foi processada com sucesso, Obrigado!");
+    window.alert("A compra foi processada com sucesso, obrigado!");
     dispatch(resetCart());
   };
 

@@ -5,6 +5,7 @@ const SCheckoutControlsWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  margin-bottom: 60px;
   > * {
     margin-left: 48px;
   }
