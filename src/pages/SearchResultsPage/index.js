@@ -5,7 +5,7 @@ import { queryProducts } from "utils/api";
 import ProductsGrid from "components/ProductsGrid";
 import Title from "components/Title";
 import PageContents from "components/PageContents";
-import EmptyResultMessage from "components/EmptyResultMessage";
+import EmptyResultMessage from "pages/SearchResultsPage/PageResult";
 
 const SearchResultsPage = ({ query }) => {
   const [loading, setLoading] = useState(true)
@@ -26,17 +26,16 @@ const SearchResultsPage = ({ query }) => {
     } else {
       return <EmptyResultMessage>Nenhum resultado encontrado para esta busca.</EmptyResultMessage>
     }
-    console.log("chamou")
   }
-
+  
+  console.log(loading);
   return (
     <PageContents>
       <Title> Resultados para "{query}" </Title>
       {loading ? (
         '~ here be skeletons ~'
       ) : (
-        pageResult()
-        //<ProductsGrid itemData={filteredProducts} />
+        pageResult
       )}
     </PageContents>
   )
