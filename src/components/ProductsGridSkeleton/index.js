@@ -1,10 +1,9 @@
+import Skeleton from "react-loading-skeleton";
+
 import {
   CardWrapper,
-  Title,
-  ImageWrapper,
 } from "components/ProductsGrid/ProductCard/ProductCard.styled";
 import { SProductsGrid, ProductsWrapper } from "components/ProductsGrid/ProductsGrid.styled";
-import Skeleton from "react-loading-skeleton";
 import { PriceWrapper } from './ProductsGridSkeleton.styled.js'
 
 export default function ProductsGridSkeleton() {
