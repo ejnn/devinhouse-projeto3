@@ -1,48 +1,33 @@
-const undefinedKeysReturnZero = {
-    get: (target, property, receiver) => {
-	if (typeof target[property] == "undefined") {
-	    return 0;
-	}
-	
-	return target[property];
-    },
-};
-
-const createItemCountProxy = (baseObject) => new Proxy(baseObject, undefinedKeysReturnZero);
-
-const initialState = {
+const storedState = window.localStorage.getItem("shoppingCart");
+const initialState =  {
     items: [],
-    itemCount: createItemCountProxy({}),
-};
+    itemCount: {},
+}
 
+const shoppingCartReducer = (state = (storedState == null) ? initialState : JSON.parse(storedState),
+			     action) => {
 
-const shoppingCartReducer = (state = initialState, action) => {
+    const itemId = action.payload?.id;
     
     switch (action.type) {
 	
     case "shoppingCart/addItem":
 	
-	var itemId = action.payload.id;
-	
-	if (state.itemCount[itemId] == 0) {
+	if (typeof state.itemCount[itemId] == "undefined") {
 	    return {
 		items: [...state.items, action.payload],
-		itemCount: createItemCountProxy({...state.itemCount,
-						 [itemId]: 1}),
+		itemCount: {...state.itemCount, [itemId]: 1},
 	    };
 	} 
 	
 	return {
 	    items: state.items,
-	    itemCount: createItemCountProxy({...state.itemCount,
-					     [itemId]: state.itemCount[itemId] + 1}),
+	    itemCount: {...state.itemCount, [itemId]: state.itemCount[itemId] + 1},
 	};
 	
     case "shoppingCart/removeItem":
 	
-	var itemId = action.payload.id;
-	
-	if (state.itemCount[itemId] <= 0) {
+	if (typeof state.itemCount[itemId] == "undefined") {
 	    return state;
 	}
 	
@@ -53,14 +38,13 @@ const shoppingCartReducer = (state = initialState, action) => {
 	    
 	    return {
 		items: state.items.filter(item => item.id != itemId),
-		itemCount: createItemCountProxy(itemCountCopy),
+		itemCount: itemCountCopy,
 	    }
 	}
 	
 	return {
 	    items: state.items,
-	    itemCount: createItemCountProxy({...state.itemCount,
-					     [itemId]: state.itemCount[itemId] - 1}),
+	    itemCount: {...state.itemCount, [itemId]: state.itemCount[itemId] - 1},
 	};
 	
     case "shoppingCart/resetCart":
@@ -99,7 +83,13 @@ export {
 
 // selectors
 
-const itemCountSelector = (id) => (state) => state.shoppingCart.itemCount[id];
+const itemCountSelector = (id) => (state) => {
+
+    const amount = state.shoppingCart.itemCount[id];
+
+    if (typeof amount == "undefined") return 0;
+    else return amount;
+}
 
 const distinctItemsCountSelector = () => (state) => state.shoppingCart.items.length;
 
