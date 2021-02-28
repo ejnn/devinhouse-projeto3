@@ -5,6 +5,7 @@ import { queryProducts } from "utils/api";
 import SearchPageResult from "./SearchPageResult";
 import Title from "components/Title";
 import PageContents from "components/PageContents";
+import ProductsGridSkeleton from "components/ProductsGridSkeleton";
 
 const SearchResultsPage = ({ query }) => {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ const SearchResultsPage = ({ query }) => {
     <PageContents>
       <Title> Resultados para "{query}" </Title>
       {loading ? (
-        "~ here be skeletons ~"
+        <ProductsGridSkeleton />
       ) : (
         <SearchPageResult filteredProducts={filteredProducts} />
       )}
