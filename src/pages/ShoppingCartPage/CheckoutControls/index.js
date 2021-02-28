@@ -22,7 +22,7 @@ const CheckoutControls = ({ }) => {
 
   return (
     <SCheckoutControlsWrapper>
-      <Price fontSize='4rem'>{totalPrice}</Price>
+      <Price integerDecimalSameSize={true} fontSize='4rem'>{totalPrice}</Price>
       <Button onClick={completePurchase}>Finalizar Compra</Button>
     </SCheckoutControlsWrapper>
   );

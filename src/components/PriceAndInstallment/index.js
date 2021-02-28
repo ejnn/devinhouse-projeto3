@@ -15,7 +15,7 @@ export default function PriceAndInstallment({ price }) {
 
     return (
         <Wrapper>
-            <Price>{price}</Price>
+            <Price integerDecimalSameSize={false}>{price}</Price>
             <Installment>ou 10x de {parcela}</Installment>
         </Wrapper>
     );
