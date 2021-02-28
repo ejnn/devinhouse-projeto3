@@ -6,7 +6,7 @@ export const CardWrapper = styled.div`
   height: 448px;
   width: 258px;
   border-radius: 7px;
-  background: ${props => props.theme.colors.background};
+  background: ${props => props.theme.colors.secondLayer};
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
   display: flex;
   flex-direction: column;
@@ -45,11 +45,11 @@ export const ImageWrapper = styled.button`
   height: 226px;
   justify-content: center;
   align-items: center;
-  background-color: Transparent;
   background-repeat:no-repeat;
   border: none;
   cursor:pointer;
   border-radius: 5px;
+  background: #0000;
 `;
 
 export const ProductImage = styled.img`

@@ -28,8 +28,5 @@ export const HomeLink = styled(Link)`
   justify-content: center;
   padding: 10px;
   outline: none;
-  border-radius: 54px;    
-  &:focus&:not(:active)&:not(:hover) {
-    box-shadow: 0px 0px 0px 1px ${props => props.theme.colors.primary};
-  }
+  border-radius: 54px;
 `;

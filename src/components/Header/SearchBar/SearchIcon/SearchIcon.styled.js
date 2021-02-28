@@ -10,7 +10,7 @@ border-radius: 50%;
 transition: 0.1s all ease-out;
 cursor: pointer;
 &:hover {
-background-color: ${props => props.theme.colors.gray};
+background: ${props => props.theme.colors.fainted};
 }
 img:active {
   transition: 0.1s all ease-out;

@@ -7,13 +7,8 @@ const lightTheme = {
       secondLayer: "#FFF",
       thirdLayer: "#F4F4F4",
       text: "#000",
-
-      darkGray: "#9E9E9E",
-      gray: "#E5E5E5",
-      lightGray: "#F4F4F4",
-      text: "#000",
-      background: "#FFF",
-      secondLayer: "#FFF"
+      boxShadow: "#00000080",
+      placeHolder: "#9E9E9E",
     },
   };
   
@@ -26,6 +21,7 @@ const lightTheme = {
       secondLayer: "#1F2937",
       thirdLayer: "#374151",
       text: "#BFDBFE",
+      placeHolder: "#BFDBFE",
   }
 }
 

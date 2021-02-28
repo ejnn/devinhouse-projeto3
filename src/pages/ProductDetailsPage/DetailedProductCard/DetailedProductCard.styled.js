@@ -6,8 +6,7 @@ export const DetailedCardContentWrapper = styled.div`
   border-radius: 7px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   padding: 32px;
-
-  background-color: ${props => props.theme.colors.secondLayer};
+  background: ${props => props.theme.colors.secondLayer};
 `
 
 export const SecondHalfWrapper = styled.div`
