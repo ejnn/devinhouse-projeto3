@@ -5,6 +5,7 @@ import { fetchProducts } from "utils/api";
 import ProductsGrid from "components/ProductsGrid";
 import Title from "components/Title";
 import PageContents from 'components/PageContents';
+import ProductsGridSkeleton from 'components/ProductsGridSkeleton'
 
 const HomePage = ({}) => {
   const [loading, setLoading] = useState(true);
@@ -20,14 +21,10 @@ const HomePage = ({}) => {
 
   return (
     <PageContents>
-      {
-      loading 
-      ? <div>skeleton</div>
-      : 
-        <>
           <Title>Bem-vindo!</Title>
-          <ProductsGrid itemData={products} />
-        </>
+      {loading 
+      ? <ProductsGridSkeleton />
+      : <ProductsGrid itemData={products} />
       }
     </PageContents>
   );
