@@ -20,7 +20,7 @@ const HomePage = ({}) => {
 
   return (
     <PageContents>
-          <Title>Bem-vindo!</Title>
+          <Title>Bem-vindo!☀️🌝🌑🌚🌛</Title>
       {loading 
       ? <ProductsGridSkeleton />
       : <ProductsGrid itemData={products} />

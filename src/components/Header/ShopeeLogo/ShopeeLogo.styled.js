@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const SShopeeLogo = styled.h1`
   color: ${props => props.theme.colors.primary};
+  ${props => props.theme.theme == "darkTheme" && css`
+  background: ${props => props.theme.colors.primaryGradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  `}
   font-weight: 700;
   font-size: max(2vw, 36px);
   letter-spacing: 10px;
