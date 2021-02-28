@@ -8,6 +8,7 @@ align-items: center;
 justify-content: center;
 border-radius: 50%;
 transition: 0.1s all ease-out;
+cursor: pointer;
 &:hover {
 background-color: ${props => props.theme.colors.gray};
 }
