@@ -1,32 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 
-import { queryProducts } from "utils/api";
+import { queryProducts } from 'utils/api'
 
-import ProductsGrid from "components/ProductsGrid";
-import Title from "components/Title";
-
+import ProductsGrid from 'components/ProductsGrid'
+import Title from 'components/Title'
+import PageContents from 'components/PageContents'
 
 const SearchResultsPage = ({ query }) => {
+  const [loading, setLoading] = useState(true)
+  const [filteredProducts, setFilteredProducts] = useState([])
 
-    const [loading, setLoading] = useState(true);
-    const [filteredProducts, setFilteredProducts] = useState([]);
+  useEffect(() => {
+    setLoading(true)
+    queryProducts(query).then(res => setFilteredProducts(res))
+    setLoading(false)
+  }, [query])
 
-    useEffect(() => {
-	setLoading(true);
-	queryProducts(query).then(res => setFilteredProducts(res));
-	setLoading(false);
-    }, [query]);
-    
-    return (
-	<>
-	    <Title> Resultados para "{query}" </Title>
-	    {
-		loading
-		    ? "~ here be skeletons ~"
-		    : <ProductsGrid itemData={filteredProducts} />
-	    }
-	</>
-    );
-};
+  return (
+    <PageContents>
+      <Title> Resultados para "{query}" </Title>
+      {loading ? (
+        '~ here be skeletons ~'
+      ) : (
+        <ProductsGrid itemData={filteredProducts} />
+      )}
+    </PageContents>
+  )
+}
 
-export default SearchResultsPage;
+export default SearchResultsPage
