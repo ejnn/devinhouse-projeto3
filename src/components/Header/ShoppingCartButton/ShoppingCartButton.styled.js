@@ -29,9 +29,9 @@ export const ShoppingCartWrapper = styled(Link)`
 
 export const Notifications = styled.div`
   border-radius: 50%;
-  background-color: red;
+  background-color: #EF4444;
   color: white;
-  font-size: 14px;
+  font-size: 1rem;
   width: 20px; /* trocar tudo pra rem no final */
   height: 20px;
   position: absolute;

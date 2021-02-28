@@ -4,7 +4,7 @@ import { fetchProducts } from "utils/api";
 
 import ProductsGrid from "components/ProductsGrid";
 import Title from "components/Title";
-import PageContents from 'components/PageContents'
+import PageContents from 'components/PageContents';
 
 const HomePage = ({}) => {
   const [loading, setLoading] = useState(true);

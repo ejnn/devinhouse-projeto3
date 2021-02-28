@@ -10,7 +10,7 @@ const SButton = styled.button`
   border-radius: 4px;
   border: 0;
   outline: none;
-  transition: 0.1s all ease-out;
+  transition: 0.2s all ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
