@@ -2,44 +2,31 @@ import { useState, useEffect } from "react";
 
 import { queryProducts } from "utils/api";
 
-import ProductsGrid from "components/ProductsGrid";
+import SearchPageResult from "./SearchPageResult";
 import Title from "components/Title";
 import PageContents from "components/PageContents";
-import EmptyResultMessage from "components/EmptyResultMessage";
 
 const SearchResultsPage = ({ query }) => {
-  const [loading, setLoading] = useState(true)
-  const [filteredProducts, setFilteredProducts] = useState([])
+  const [loading, setLoading] = useState(true);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    setLoading(true)
-    queryProducts(query).then(res => setFilteredProducts(res))
-    setLoading(false)
-    
-  }, [query])
-
-  console.log("filteredproducts", filteredProducts);
-  
-  const pageResult = () => {
-    if (filteredProducts.length != 0) {
-      return <ProductsGrid itemData={filteredProducts} />
-    } else {
-      return <EmptyResultMessage>Nenhum resultado encontrado para esta busca.</EmptyResultMessage>
-    }
-    console.log("chamou")
-  }
+    setLoading(true);
+    queryProducts(query)
+      .then(res => setFilteredProducts(res))
+      .then(() => setLoading(false));
+  }, [query]);
 
   return (
     <PageContents>
       <Title> Resultados para "{query}" </Title>
       {loading ? (
-        '~ here be skeletons ~'
+        "~ here be skeletons ~"
       ) : (
-        pageResult()
-        //<ProductsGrid itemData={filteredProducts} />
+        <SearchPageResult filteredProducts={filteredProducts} />
       )}
     </PageContents>
-  )
-}
+  );
+};
 
-export default SearchResultsPage
+export default SearchResultsPage;

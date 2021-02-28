@@ -13,7 +13,6 @@ const HomePage = ({}) => {
 
   useEffect(() => {
     fetchProducts().then((state) => {
-      console.log(state);
       setProducts(state);
       setLoading(!loading);
     });

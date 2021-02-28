@@ -13,7 +13,6 @@ const ProductDetailsPage = ({ productId }) => {
 
   useEffect(() => {
     fetchProduct(productId).then(state => {
-      console.log(state)
       setProduct(state)
       setLoading(!loading)
     })
