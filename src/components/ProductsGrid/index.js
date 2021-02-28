@@ -7,8 +7,8 @@ export default function ProductsGrid({ itemData }) {
         <SProductsGrid>
           <ProductsWrapper>
             {itemData.map((itemData) => (
-              <CentralizerWrapper>
-                <ProductCard key={itemData.id} itemData={itemData}/>
+              <CentralizerWrapper key={itemData.id}>
+                <ProductCard itemData={itemData}/>
               </CentralizerWrapper>
             ))}
           </ProductsWrapper>
