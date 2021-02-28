@@ -21,7 +21,7 @@ const ProductTable = ({ products }) => {
               return (
                 <Fragment key={productData.id}>
                   <RowSeparator />
-                  <ProductRow key={productData.id} productData={productData} />
+                  <ProductRow productData={productData} />
                 </Fragment>
               );
             }

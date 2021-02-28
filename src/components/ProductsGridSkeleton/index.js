@@ -10,8 +10,8 @@ export default function ProductsGridSkeleton() {
   return (
     <SProductsGrid>
       <ProductsWrapper>
-        {[1, 2, 3, 4].map(() => (
-          <CardWrapper>
+        {[1, 2, 3, 4].map((index) => (
+          <CardWrapper key={"skeleton" + index}>
             <Skeleton width={226} height={226} />
             <Skeleton width={226} height={18} />
             <PriceWrapper><Skeleton width={90} height={25} />
