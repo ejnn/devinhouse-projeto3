@@ -9,7 +9,7 @@ const GoBackButton = () => {
 
   return (
     <GoBackWrapper>
-      <Button onClick={history.goBack}>Voltar</Button>
+      <Button onClick={history.goBack} aria-label="Botão de Voltar à Página Anterior">Voltar</Button>
     </GoBackWrapper>
   )
 }

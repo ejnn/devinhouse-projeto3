@@ -28,7 +28,7 @@ export default function ItemPurchaseButton({ itemData }) {
 
 const AddToCartButton = ({ handleClick }) => {
   return (
-    <Button onClick={handleClick}>
+    <Button onClick={handleClick} aria-label="Botão de Comprar">
       Comprar
     </Button>
   );
@@ -37,7 +37,8 @@ const AddToCartButton = ({ handleClick }) => {
 const ItemAmountControls = ({ handleDecrease, itemAmount, handleIncrease }) => {
   return (
     <SAmountControlsWrapper>
-      <Button width='44px' onClick={handleDecrease}>
+      <Button width='44px' onClick={handleDecrease} 
+      aria-label="Botão de Decremento de Produto">
         {
           (itemAmount == 1)
             ? <STrashIcon />
@@ -47,7 +48,8 @@ const ItemAmountControls = ({ handleDecrease, itemAmount, handleIncrease }) => {
 
       <div> {itemAmount} </div>
 
-      <Button width='44px' onClick={handleIncrease}> + </Button>
+      <Button width='44px' onClick={handleIncrease}
+      aria-label="Botão de Incremento de Produto"> + </Button>
     </SAmountControlsWrapper>
   );
 };

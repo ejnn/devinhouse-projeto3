@@ -23,7 +23,7 @@ const CheckoutControls = ({ }) => {
   return (
     <SCheckoutControlsWrapper>
       <Price integerDecimalSameSize={true} fontSize='4rem'>{totalPrice}</Price>
-      <Button onClick={completePurchase}>Finalizar Compra</Button>
+      <Button onClick={completePurchase} aria-label="Botão para Finalizar Compra">Finalizar Compra</Button>
     </SCheckoutControlsWrapper>
   );
 };
