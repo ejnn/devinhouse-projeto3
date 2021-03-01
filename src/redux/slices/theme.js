@@ -12,17 +12,14 @@ const themeReducer = (state = initialState, action) => {
 
   case "theme/toggleTheme":
 
-      console.log(themeKeys);
       let nextThemeIndex = themeKeys.indexOf(state.themeId) + 1;
 
       let newThemeId;
 
       if (nextThemeIndex == themeKeys.length) {
  	  newThemeId = themeKeys[0];
- 	  console.log("reset " + newThemeId);
       } else {
  	  newThemeId = themeKeys[nextThemeIndex];
- 	  console.log("next " + newThemeId);
       }
 
       return {
