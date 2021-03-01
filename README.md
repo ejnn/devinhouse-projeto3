@@ -1,21 +1,32 @@
-# devinhouse-projeto3
+# [Shopee](https://ejnn.github.io/devinhouse-projeto3/)
 
-## ✋ Autores
+## Sobre
 
-+ Bruno Zardo 🤠
-+ David Rosa Mendonça 🍔
-+ Eduardo Jorge Nicolau 👽
-+ Guilherme Noronha da Silva ♨️
-+ Gustavo Luchi da Silva 🐧
-+ Murilo Sartori 🍺
+Este é o terceiro projeto do módulo de front-end do DEVinHouse! Visite a demo [clicando aqui](https://ejnn.github.io/devinhouse-projeto3/).
 
-## 🗄️ Tecnologias
+## Tecnologias utilizadas
++ [React](https://reactjs.org/)
++ [Redux](https://redux.js.org/)
++ [Styled Components](https://styled-components.com/)
++ [React Router](https://reactrouter.com/)
 
-+ ⚛️ React
-+ Redux
-+ Styled Components
-+ React Router DOM
+## Autores
 
-## Recursos
-+ [Design guideline](https://www.figma.com/file/xcPfzouOFGHALmaI729dU8/Desafio-Front-end-SENAI?node-id=0%3A1)
-+ [API](https://github.com/luanfelipecosta/fake-product-api)
+<div> 
+<img src="https://github.com/brunozardo.png" height="auto" width="50px"> Bruno Zardo
+</div>
+<div>
+<img src="https://github.com/Mendoncadvd.png" height="auto" width="50px"> David Rosa Mendonça
+</div>
+<div> 
+<img src="https://github.com/ejnn.png" height="auto" width="50px"> Eduardo Jorge Nicolau
+</div>
+<div>
+<img src="https://github.com/GuiNoronhaS.png" height="auto" width="50px"> Guilherme Noronha da Silva
+</div>
+<div> 
+<img src="https://github.com/gustavoluchi.png" height="auto" width="50px"> Gustavo Luchi da Silva
+</div>
+<div>
+<img src="https://github.com/murilosartori.png" height="auto" width="50px"> Murilo Sartori
+</div>
