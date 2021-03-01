@@ -6,7 +6,7 @@ import DetailedProductCard from "./DetailedProductCard";
 import Title from "components/Title";
 import GoBackButton from "./GoBackButton";
 import PageContents from "components/PageContents";
-import DetailedProductCardSkeleton from "components/DetailedProductCardSkeleton";
+import DetailedProductCardSkeleton from "./DetailedProductCardSkeleton";
 
 const ProductDetailsPage = ({ productId }) => {
   const [loading, setLoading] = useState(true)
