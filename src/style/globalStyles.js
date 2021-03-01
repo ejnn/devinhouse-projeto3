@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     outline: none;
     transition: 0.1s all ease-out;
+    box-shadow: 0px 0px 0px 1px #0000;
   }
 
   *:focus:not(:active):not(:hover):not(input) {

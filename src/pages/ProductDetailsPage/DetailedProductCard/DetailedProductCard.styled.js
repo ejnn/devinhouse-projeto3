@@ -15,6 +15,7 @@ export const SecondHalfWrapper = styled.div`
   justify-content: space-between;
   margin-left: 32px;
   height: 226px;
+  width: 100%;
 `
 
 export const ProductDescription = styled.h3`
