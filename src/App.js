@@ -3,7 +3,7 @@ import { themeSelector } from "redux/slices/theme.js";
 import { ThemeProvider } from "styled-components";
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router basename="/devinhouse-projeto3">
+      <Router>
 
         <GlobalStyle />
         <Header />
