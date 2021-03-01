@@ -21,7 +21,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router>
+      <Router basename="/devinhouse-projeto3">
 
         <GlobalStyle />
         <Header />
