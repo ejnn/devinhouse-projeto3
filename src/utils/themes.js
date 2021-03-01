@@ -7,7 +7,7 @@ const lightTheme = {
     secondLayer: "#FFF",
     thirdLayer: "#F4F4F4",
     text: "#000",
-    textContrast: "#000",
+    textContrast: "#FFF",
     boxShadow: "#00000080",
     placeHolder: "#9E9E9E",
   },
