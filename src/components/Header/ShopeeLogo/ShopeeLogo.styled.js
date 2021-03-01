@@ -17,7 +17,6 @@ export const SShopeeLogo = styled.h1`
   cursor: pointer;
   outline: none;
   text-decoration: none;
-  transition: 0.1s all ease-out;
   @media (max-width: 600px) {
   margin: 8px;
   }

@@ -12,7 +12,6 @@ export const ShoppingCartWrapper = styled(Link)`
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: 0.1s all ease-out;
   flex-shrink: 0;
   &:hover {
     box-shadow: 2px 2px 3px #00000077;
