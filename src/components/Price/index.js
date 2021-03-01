@@ -3,7 +3,7 @@ import {
     IntegerPartOfPrice 
 } from "./Price.styled";
 
-export default function Price ({ children, fontSize }) {
+export default function Price ({ children, fontSize, integerDecimalSameSize }) {
     const localePrice = children.toLocaleString("pt-BR", {
         maximumFractionDigits: 2,
         style: "currency",
@@ -19,8 +19,13 @@ export default function Price ({ children, fontSize }) {
     return (
     <div>
         <PriceComplement fontSize={fontSize} >{currencySymbol}</PriceComplement>
-        <IntegerPartOfPrice fontSize={fontSize} >{integerPart}</IntegerPartOfPrice>
-        <PriceComplement fontSize={fontSize} >{decimalPart}</PriceComplement>
+        { integerDecimalSameSize 
+            ? <IntegerPartOfPrice fontSize={fontSize} >{integerPart}{decimalPart}</IntegerPartOfPrice>
+            : <>
+                <IntegerPartOfPrice fontSize={fontSize} >{integerPart}</IntegerPartOfPrice>
+                <PriceComplement fontSize={fontSize} >{decimalPart}</PriceComplement>
+              </>
+        }
     </div>
     );
 }

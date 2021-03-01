@@ -15,9 +15,9 @@ const ProductRow = ({ productData }) => {
     return (
 	<Row>
 	    <SProductTitle> {productData.name} </SProductTitle>
-	    <Price>{productData.price}</Price>
+	    <Price integerDecimalSameSize={false}>{productData.price}</Price>
 	    <ItemPurchaseButton itemData={productData}/>
-	    <Price>{productData.price * amountInCart}</Price>
+	    <Price integerDecimalSameSize={false}>{productData.price * amountInCart}</Price>
 	</Row>
     );
 };
