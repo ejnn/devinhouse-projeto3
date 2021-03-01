@@ -29,7 +29,7 @@ export const Input = styled.input`
   border: 0;
   width: 80%;
   height: 40px;
-  color: ${props => props.theme.colors.placeHolder};
+  color: ${props => props.theme.colors.text};
   outline: none;
   ::placeholder {
     color: ${props => props.theme.colors.placeHolder};
