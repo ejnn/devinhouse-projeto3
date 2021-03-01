@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as SearchIcon } from "assets/search icon.svg";
 
 export const SSearchIcon = styled.div`
 height: 40px;
@@ -17,5 +18,10 @@ img:active {
   transform: translate(1px, 1px);
 }
 `;
+
+export const SearchIconSVG = styled(SearchIcon)`
+  * {
+  fill: ${props => props.theme.colors.primary}
+  }`;
 
 export default SSearchIcon;

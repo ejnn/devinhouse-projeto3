@@ -49,7 +49,7 @@ export const ImageWrapper = styled.button`
   border: none;
   cursor:pointer;
   border-radius: 5px;
-  background: #0000;
+  background: #FFF;
 `;
 
 export const ProductImage = styled.img`

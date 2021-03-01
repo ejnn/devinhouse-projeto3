@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const SButton = styled.button`
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1.5rem;
   line-height: 24px;
   height: 44px;
-  color: white;
+  color: ${props => props.theme.colors.textContrast};
   background: ${props => props.theme.colors.primary};
   border-radius: 4px;
   border: 0;

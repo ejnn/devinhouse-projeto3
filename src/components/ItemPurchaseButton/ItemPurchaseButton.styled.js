@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import trashIconPath from "assets/trash icon.svg";
+import { ReactComponent as trashIconPath } from "assets/trash icon.svg";
 
 const SAmountControlsWrapper = styled.div`
     display: flex;
@@ -11,7 +11,11 @@ const SAmountControlsWrapper = styled.div`
     max-width: 226px;
 `;
 
-const STrashIcon = ({ }) => <img src={trashIconPath} alt="Icone da Lixeira" />;
+const STrashIcon = styled(trashIconPath)`
+  > * {
+    fill: ${props => props.theme.colors.textContrast};
+  }
+`;
 
 export {
   SAmountControlsWrapper,
