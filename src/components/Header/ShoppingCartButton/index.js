@@ -16,7 +16,7 @@ export default function ShoppingCartButton(props) {
 
 
   return (
-    <ShoppingCartWrapper tabIndex='0' to='/carrinho' onKeyPress={onEnter} >
+    <ShoppingCartWrapper tabIndex='0' to='/carrinho' onKeyPress={onEnter} aria-label="Link para página de carrinho de produtos">
       <SCartIcon />
       {(items > 0) &&
         <Notifications>{items}</Notifications>}
