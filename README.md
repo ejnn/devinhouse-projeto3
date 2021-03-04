@@ -9,7 +9,7 @@ Este é o terceiro projeto do módulo de front-end do DEVinHouse! Visite a demo 
 
 ## Tecnologias utilizadas
 + [React](https://reactjs.org/)
-+ <img src="https://avatars.githubusercontent.com/u/13142323?s=88&v=4" height="auto" width="18">[Redux](https://redux.js.org/)
++ <img src="https://avatars.githubusercontent.com/u/13142323?s=88&v=4" height="auto" width="18"> [Redux](https://redux.js.org/)
 + [Styled Components](https://styled-components.com/)
 + [React Router](https://reactrouter.com/)
 
