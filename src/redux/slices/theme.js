@@ -1,12 +1,13 @@
 import themes from "utils/themes";
 
 const themeKeys = Object.keys(themes);
+const storedState = window.localStorage.getItem("theme");
 const initialState = {
     theme: themes[themeKeys[0]],
     themeId: themeKeys[0],
 };
 
-const themeReducer = (state = initialState, action) => {
+const themeReducer = (state = (storedState == null) ? initialState : JSON.parse(storedState), action) => {
 
   switch (action.type) {
 
