@@ -12,7 +12,7 @@ export default function DetailedProductCardSkeleton() {
   return (
     <>
       <STitleDiv>
-        <Skeleton width={'90%'} height={116} />
+        <Skeleton width={'90%'} height={58} />
       </STitleDiv>
       <DetailedCardContentWrapper>
         <ImageWrapper>

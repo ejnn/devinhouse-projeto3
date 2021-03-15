@@ -13,6 +13,7 @@ export const ShoppingCartWrapper = styled(Link)`
   align-items: center;
   position: relative;
   flex-shrink: 0;
+  margin-right: 12px;
   &:hover {
     box-shadow: 2px 2px 3px #00000077;
   }

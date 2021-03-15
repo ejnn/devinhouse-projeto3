@@ -2,11 +2,15 @@ import styled from 'styled-components'
 
 export const DetailedCardContentWrapper = styled.div`
   display: flex;
-  width: 100%;
+  width: calc(100% - 16px);
   border-radius: 7px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   padding: 32px;
   background: ${props => props.theme.colors.secondLayer};
+  @media (max-width: 600px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `
 
 export const SecondHalfWrapper = styled.div`
@@ -16,6 +20,12 @@ export const SecondHalfWrapper = styled.div`
   margin-left: 32px;
   height: 226px;
   width: 100%;
+  @media (max-width: 600px) {
+    margin-left: 0;
+    > :nth-child(3) {
+      margin: 0 auto;
+    }
+  }
 `
 
 export const ProductDescription = styled.h3`
@@ -30,6 +40,7 @@ export const ImageWrapper = styled.div`
   height: 226px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 12px;
 `
 
 export const ProductImage = styled.img`
