@@ -5,7 +5,8 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 flex-shrink: 0;
-width: 60%;
+flex-grow: 1;
+max-width: 650px;
 margin: 4px 24px;
 height: 44px;
 padding: 10px 32px;
@@ -20,6 +21,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 &:hover {
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 650px) {
+  width: calc(100% - 24px);
+  margin: 12px;
 }
 `;
 
