@@ -9,33 +9,32 @@ import PageContents from "components/PageContents";
 import DetailedProductCardSkeleton from "./DetailedProductCardSkeleton";
 
 const ProductDetailsPage = ({ productId }) => {
-  const [loading, setLoading] = useState(true)
-  const [product, setProduct] = useState({})
-  const { width } = useWindowSize();
-
-  useEffect(() => {
-    fetchProduct(productId).then(state => {
-      setProduct(state)
-      setLoading(!loading)
-    })
-  }, [])
-
-  const isLoading = (product) => {
+    const [loading, setLoading] = useState(true)
+    const [product, setProduct] = useState({})
+    const { width } = useWindowSize();
+    
+    useEffect(() => {
+	fetchProduct(productId).then(state => {
+	    setProduct(state)
+	    setLoading(!loading)
+	})
+    }, [])
+    
     if (loading) {
-      return <DetailedProductCardSkeleton />
+	return (
+    	    <PageContents>
+		<DetailedProductCardSkeleton/>
+    	    </PageContents>
+	);
     }
-      return <>
-        <Title fontSize={((width < 650)? '2rem' : null)}>{product.name}</Title>
-        <DetailedProductCard itemData={product} />
-        <GoBackButton />
-      </>
-    }
-
-  return (
-    <PageContents>
-      {isLoading(product)}
-    </PageContents>
-  )
+    
+    return (
+    	<PageContents>
+            <Title fontSize={((width < 650)? '2rem' : null)}>{product.name}</Title>
+            <DetailedProductCard itemData={product} />
+            <GoBackButton/>
+    	</PageContents>
+    );
 }
 
-export default ProductDetailsPage
+export default ProductDetailsPage;
