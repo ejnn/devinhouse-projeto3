@@ -1,8 +1,8 @@
 # [Shopee](https://ejnn.github.io/devinhouse-projeto3/)
 
 ## Sobre
-Este é o terceiro projeto do módulo de front-end do DEVinHouse! Visite a nossa [demo](https://ejnn.github.io/devinhouse-projeto3/)!
-Veja também [um grafo da estrutura do projeto](https://htmlpreview.github.io/?https://github.com/ejnn/devinhouse-projeto3/blob/main/dependencycruiser.html).
+Este é o terceiro projeto do módulo de front-end do DEVinHouse! Visite a nossa [demo](https://ejnn.github.io/devinhouse-projeto3/)! <br>
+Veja também [um grafo com a estrutura do projeto](https://htmlpreview.github.io/?https://github.com/ejnn/devinhouse-projeto3/blob/main/dependencycruiser.html).
 
 ## Tecnologias utilizadas
 + <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" height="auto" width="18"> [React](https://reactjs.org/)
