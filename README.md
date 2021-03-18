@@ -1,7 +1,8 @@
 # [Shopee](https://ejnn.github.io/devinhouse-projeto3/)
 
 # Prévia 
-[![Prévia](https://i.gyazo.com/da7e69ef78bafd201446ddb1bcb1dfed.gif)](https://ejnn.github.io/devinhouse-projeto3/)
+Spoiler
+[![Prévia](https://i. gyazo.com/da7e69ef78bafd201446ddb1bcb1dfed.gif)](https://ejnn.github.io/devinhouse-projeto3/)
 
 ## Sobre
 
