@@ -1,9 +1,5 @@
 # [Shopee](https://ejnn.github.io/devinhouse-projeto3/)
 
-# Prévia 
-Spoiler
-[![Prévia](https://i. gyazo.com/da7e69ef78bafd201446ddb1bcb1dfed.gif)](https://ejnn.github.io/devinhouse-projeto3/)
-
 ## Sobre
 
 Este é o terceiro projeto do módulo de front-end do DEVinHouse! Visite a demo [clicando aqui](https://ejnn.github.io/devinhouse-projeto3/).
